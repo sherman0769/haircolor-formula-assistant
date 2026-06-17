@@ -149,6 +149,7 @@ export function FormulaForm() {
   const [input, setInput] = useState<FormulaInput>(DEFAULT_FORMULA_INPUT);
   const [result, setResult] = useState<FormulaOutput | null>(null);
   const [activeStep, setActiveStep] = useState(0);
+  const stepTopRef = useRef<HTMLDivElement>(null);
   const resultPanelRef = useRef<HTMLDivElement>(null);
   const brandOptions = useMemo(() => getBrandOptions(), []);
   const productLineOptions = useMemo(
@@ -191,11 +192,35 @@ export function FormulaForm() {
     });
   }
 
+  function scrollToStepTop() {
+    const stepTop = stepTopRef.current;
+
+    if (!stepTop) {
+      return;
+    }
+
+    const stickyOffset = window.matchMedia("(max-width: 639px)").matches
+      ? 150
+      : 130;
+    const targetTop =
+      stepTop.getBoundingClientRect().top + window.scrollY - stickyOffset;
+
+    window.scrollTo({
+      behavior: "auto",
+      top: Math.max(0, targetTop),
+    });
+  }
+
+  function goToStep(stepIndex: number) {
+    setActiveStep(stepIndex);
+    scrollToStepTop();
+  }
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (!isLastStep) {
-      setActiveStep((current) => Math.min(current + 1, formSteps.length - 1));
+      goToNextStep();
       return;
     }
 
@@ -210,10 +235,12 @@ export function FormulaForm() {
 
   function goToPreviousStep() {
     setActiveStep((current) => Math.max(current - 1, 0));
+    scrollToStepTop();
   }
 
   function goToNextStep() {
     setActiveStep((current) => Math.min(current + 1, formSteps.length - 1));
+    scrollToStepTop();
   }
 
   return (
@@ -230,7 +257,8 @@ export function FormulaForm() {
                 <button
                   key={step.title}
                   type="button"
-                  onClick={() => setActiveStep(index)}
+                  aria-current={selected ? "step" : undefined}
+                  onClick={() => goToStep(index)}
                   className={`min-h-12 min-w-0 rounded-md border px-2 py-1.5 text-left transition sm:min-h-16 sm:py-2 ${
                     selected
                       ? "border-accent bg-teal-50 text-teal-950"
@@ -254,6 +282,8 @@ export function FormulaForm() {
             })}
           </div>
         </section>
+
+        <div ref={stepTopRef} className="scroll-mt-36" aria-hidden="true" />
 
         <ColorLevelMeter
           currentLevel={input.currentLevel}
