@@ -190,6 +190,66 @@
     "notes": "Official Milbon USA PDF color chart used as supporting source."
   },
   {
+    "id": "canbran-paul-mitchell-brand-page",
+    "title": "Paul Mitchell Brand Page",
+    "publisher": "肯邦國際",
+    "sourceType": "official_brand_page",
+    "url": "https://www.canbranbeauty.com.tw/brand/brand_detail/618",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Canbran website confirms the Paul Mitchell brand category, but product-specific color technical rules are not exposed on this page."
+  },
+  {
+    "id": "canbran-paul-mitchell-the-demi-page",
+    "title": "The Demi 幻彩染系列",
+    "publisher": "肯邦 / Paul Mitchell",
+    "sourceType": "brand_campaign_page",
+    "url": "https://thedemi.1shop.tw/canbran",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Public Canbran campaign page for The Demi. Useful for service positioning, not enough for verified technical rules."
+  },
+  {
+    "id": "paul-mitchell-professional-hair-color-page",
+    "title": "Professional Salon Hair Color & Hair Dye",
+    "publisher": "Paul Mitchell",
+    "sourceType": "official_brand_page",
+    "url": "https://www.paulmitchell.com/pages/professional-hair-color",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell professional color portfolio page. It confirms color-service positioning but does not expose full product-line rules."
+  },
+  {
+    "id": "paul-mitchell-the-color-10-elearning",
+    "title": "Paul Mitchell The Color 10 Product Knowledge",
+    "publisher": "Paul Mitchell eLearning",
+    "sourceType": "official_education_page",
+    "url": "https://elearning.paulmitchell.com/courses/pm-the-color-10-minute-product-knowledge",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official education page confirms The Color 10 positioning. Full course content and Canbran Taiwan availability still require manual verification."
+  },
+  {
+    "id": "paul-mitchell-skylight-cosmoprof",
+    "title": "Skylight Hand-Painting Clay Lightener",
+    "publisher": "CosmoProf / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.com/USA-M-570301.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier page with Skylight positioning and public-use guidance. Verify against current Paul Mitchell or Canbran technical manual before upgrading."
+  },
+  {
+    "id": "taiwan-special-cosmetic-license-canbran-paul-mitchell",
+    "title": "Canbran Paul Mitchell public special-cosmetics license references",
+    "publisher": "Public data mirror of Taiwan special-purpose cosmetics records",
+    "sourceType": "public_data_mirror",
+    "url": "https://data.zhupiter.com/oddt/12751368/%E8%82%AF%E9%82%A6%E8%B6%85%E4%B8%96%E4%BB%A3%E8%89%B7%E5%BD%A9%E6%9F%93%E9%AB%AE%E5%8A%91-HLPN/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Historical public-license reference showing Canbran applicant records for Paul Mitchell color-related products. Dates shown must be rechecked against the current official Taiwan regulatory database before any verified claim."
+  },
+  {
     "id": "generic-education-policy",
     "title": "Generic Education Rules Policy",
     "publisher": "Project seed data",

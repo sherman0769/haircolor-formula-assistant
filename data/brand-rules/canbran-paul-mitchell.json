@@ -1,0 +1,400 @@
+[
+  {
+    "brandId": "canbran-paul-mitchell",
+    "brandName": "肯邦 Canbran / Paul Mitchell",
+    "productLineId": "paul-mitchell-color-xg",
+    "productLineName": "The Color XG 超世代艷彩染髮劑",
+    "region": "Taiwan / Canbran distribution candidate",
+    "serviceTypes": [
+      "permanent",
+      "retouch",
+      "grey-coverage",
+      "color-correction",
+      "high-lift"
+    ],
+    "verified": "partial",
+    "sourceIds": [
+      "canbran-paul-mitchell-brand-page",
+      "paul-mitchell-professional-hair-color-page",
+      "taiwan-special-cosmetic-license-canbran-paul-mitchell"
+    ],
+    "sourceTitle": "Canbran Paul Mitchell brand page and public product-license references",
+    "sourceType": "official_brand_page + official_brand_page + public_data_mirror",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "確認可作為肯邦 / Paul Mitchell 染劑候選產品線；完整台灣官方技術手冊、現行許可與教育規則尚未補齊。",
+    "notes": "Interim product-line option only. Do not output precise grams until official Canbran or Paul Mitchell technical manual data is added.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "pm-color-xg-permanent-partial",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1 public reference; official Taiwan manual required",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 25,
+          "processingTimeMax": 45,
+          "conditions": [
+            "Permanent color candidate for Paul Mitchell Color XG services."
+          ],
+          "warnings": [
+            "Partial public reference only. Confirm current Canbran or Paul Mitchell technical manual before use."
+          ]
+        },
+        {
+          "id": "pm-color-xg-retouch-partial",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1 public reference; official Taiwan manual required",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 25,
+          "processingTimeMax": 45,
+          "conditions": [
+            "Retouch candidate for new growth only."
+          ],
+          "warnings": [
+            "Avoid overlap on previously colored porous lengths. Confirm official retouch timing."
+          ]
+        },
+        {
+          "id": "pm-color-xg-grey-partial",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1 public reference; grey rules require official manual",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 35,
+          "processingTimeMax": 45,
+          "conditions": [
+            "Grey coverage candidate where official shade family and base support rules are available."
+          ],
+          "warnings": [
+            "Natural base ratio and resistant grey rules are not verified for this MVP entry."
+          ]
+        },
+        {
+          "id": "pm-color-xg-high-lift-partial",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "1:2 public reference; high-lift rules require official manual",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 45,
+          "processingTimeMax": 60,
+          "conditions": [
+            "High-lift candidate only after confirming natural base level and official series rules."
+          ],
+          "warnings": [
+            "High-lift is risk-sensitive and must remain partial until official high-lift restrictions are modeled."
+          ]
+        },
+        {
+          "id": "pm-color-xg-correction-partial",
+          "serviceType": "color-correction",
+          "ratio": 1,
+          "ratioLabel": "brand-dependent; official manual required",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 5,
+          "processingTimeMax": 45,
+          "conditions": [
+            "Corrective use must be designed after strand testing."
+          ],
+          "warnings": [
+            "Color correction cannot use fixed public ratios without official education support."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit and low-lift reference"],
+          "restrictions": ["Confirm Color XG-compatible developer and current official instructions."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["grey coverage and moderate lift reference"],
+          "restrictions": ["Confirm white-hair coverage family and processing time from official manual."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["higher lift reference"],
+          "restrictions": ["Avoid high-damage hair; confirm near-scalp limits."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["high-lift reference"],
+          "restrictions": ["High-risk use; official high-lift rules and senior stylist confirmation required."]
+        }
+      ],
+      "restrictions": [
+        "This Canbran / Paul Mitchell Color XG entry is partial and cannot output precise grams.",
+        "Current official Taiwan technical manual and product availability must be confirmed before upgrading."
+      ],
+      "warnings": [
+        "Use only as a product-line option and directional reference until verified."
+      ]
+    }
+  },
+  {
+    "brandId": "canbran-paul-mitchell",
+    "brandName": "肯邦 Canbran / Paul Mitchell",
+    "productLineId": "paul-mitchell-the-demi",
+    "productLineName": "The Demi 幻彩染",
+    "region": "Taiwan / Canbran distribution candidate",
+    "serviceTypes": [
+      "post-fade-toning",
+      "cool-tone-adjustment",
+      "color-correction",
+      "grey-coverage"
+    ],
+    "verified": "partial",
+    "sourceIds": [
+      "canbran-paul-mitchell-brand-page",
+      "canbran-paul-mitchell-the-demi-page",
+      "paul-mitchell-professional-hair-color-page",
+      "taiwan-special-cosmetic-license-canbran-paul-mitchell"
+    ],
+    "sourceTitle": "Canbran The Demi campaign page and Paul Mitchell professional color portfolio",
+    "sourceType": "brand_campaign_page + official_brand_page + public_data_mirror",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "確認 The Demi 可作為半永久、補色、矯色與光澤染候選；混合處理液比例與停留規則仍需官方手冊。",
+    "notes": "The Demi should be treated as deposit/toning/correction direction in the MVP, not a lift or full grey-coverage engine.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "pm-the-demi-toning-partial",
+          "serviceType": "post-fade-toning",
+          "ratio": 1,
+          "ratioLabel": "The Demi processing ratio requires official manual",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": [
+            "Deposit-only toning or color refresh candidate after lightening or fading."
+          ],
+          "warnings": [
+            "Use only with the correct The Demi processing liquid or developer specified by the official manual."
+          ]
+        },
+        {
+          "id": "pm-the-demi-cool-adjustment-partial",
+          "serviceType": "cool-tone-adjustment",
+          "ratio": 1,
+          "ratioLabel": "The Demi processing ratio requires official manual",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": [
+            "Cool-tone correction candidate on pre-lightened or faded hair."
+          ],
+          "warnings": [
+            "Porous hair may over-deposit; strand test required."
+          ]
+        },
+        {
+          "id": "pm-the-demi-correction-partial",
+          "serviceType": "color-correction",
+          "ratio": 1,
+          "ratioLabel": "brand-dependent; official manual required",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": [
+            "Color glossing, refresh, and tone-balancing candidate."
+          ],
+          "warnings": [
+            "Corrective toning must be designed from the real undertone and porosity."
+          ]
+        },
+        {
+          "id": "pm-the-demi-grey-blend-partial",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "grey blending only; official manual required",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": [
+            "Grey blending or soft grey diffusion candidate, not guaranteed full coverage."
+          ],
+          "warnings": [
+            "Do not present The Demi as full white-hair coverage unless official education confirms the technique."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 1.9,
+          "volume": 6,
+          "liftRange": [0, 0],
+          "recommendedUse": ["soft deposit and glossing reference"],
+          "restrictions": ["Processing liquid/developer must match official The Demi instructions."]
+        },
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 0],
+          "recommendedUse": ["deposit-only correction reference"],
+          "restrictions": ["Confirm compatibility and timing before use."]
+        }
+      ],
+      "restrictions": [
+        "This The Demi entry is partial and cannot output precise grams.",
+        "Do not use for lift planning; treat as deposit, refresh, gloss, correction or grey-blending direction only."
+      ],
+      "warnings": [
+        "Official The Demi technical manual is required before upgrading to verified."
+      ]
+    }
+  },
+  {
+    "brandId": "canbran-paul-mitchell",
+    "brandName": "肯邦 Canbran / Paul Mitchell",
+    "productLineId": "paul-mitchell-the-color-10",
+    "productLineName": "The Color 10 絕彩瞬色白髮染",
+    "region": "Taiwan / Canbran availability requires confirmation",
+    "serviceTypes": [
+      "grey-coverage",
+      "retouch"
+    ],
+    "verified": "unverified",
+    "sourceIds": [
+      "canbran-paul-mitchell-brand-page",
+      "paul-mitchell-the-color-10-elearning"
+    ],
+    "sourceTitle": "Paul Mitchell The Color 10 education page with Canbran brand context",
+    "sourceType": "official_education_page + official_brand_page",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "Paul Mitchell 官方教育頁確認 The Color 10 定位；肯邦台灣端現行販售、完整技術手冊與色號仍待人工確認。",
+    "notes": "Keep unverified until current Canbran Taiwan product availability and official technical rules are obtained.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "pm-the-color-10-grey-unverified",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "10-minute grey service; ratio requires official manual",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 10,
+          "conditions": [
+            "Express grey service candidate only after confirming official shade family and developer."
+          ],
+          "warnings": [
+            "This MVP entry uses product-positioning data only; do not output exact formula."
+          ]
+        },
+        {
+          "id": "pm-the-color-10-retouch-unverified",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "10-minute retouch service; ratio requires official manual",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 10,
+          "conditions": [
+            "Express retouch candidate where official education confirms use."
+          ],
+          "warnings": [
+            "Confirm current Canbran Taiwan supply and official processing rules."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [0, 1],
+          "recommendedUse": ["express grey blending or coverage reference"],
+          "restrictions": ["Developer and shade family must be confirmed by official technical material."]
+        }
+      ],
+      "restrictions": [
+        "This The Color 10 entry is unverified and cannot output precise grams.",
+        "Do not use until current Canbran Taiwan product availability and official manual are confirmed."
+      ],
+      "warnings": [
+        "Temporary product option only. Senior stylist confirmation and strand test required."
+      ]
+    }
+  },
+  {
+    "brandId": "canbran-paul-mitchell",
+    "brandName": "肯邦 Canbran / Paul Mitchell",
+    "productLineId": "paul-mitchell-skylight",
+    "productLineName": "Skylight 手刷漂染專用明度調整粉",
+    "region": "Taiwan / Canbran distribution candidate",
+    "serviceTypes": [
+      "bleach"
+    ],
+    "verified": "partial",
+    "sourceIds": [
+      "canbran-paul-mitchell-brand-page",
+      "paul-mitchell-skylight-cosmoprof",
+      "taiwan-special-cosmetic-license-canbran-paul-mitchell"
+    ],
+    "sourceTitle": "Paul Mitchell Skylight professional supplier page and Canbran public product-license reference",
+    "sourceType": "professional_supplier_page + official_brand_page + public_data_mirror",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "確認可作為 Paul Mitchell 手刷漂染候選；完整官方技術手冊、頭皮限制與台灣現行供應仍需補齊。",
+    "notes": "Lightener candidate only. The MVP must block precise grams while partial.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "pm-skylight-bleach-partial",
+          "serviceType": "bleach",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5 public reference; official Taiwan manual required",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 5,
+          "processingTimeMax": 50,
+          "conditions": [
+            "Freehand lightening or balayage candidate."
+          ],
+          "warnings": [
+            "Lightener work is high risk; official manual and strand test required before exact formula."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["low-risk lightening reference"],
+          "restrictions": ["Confirm official developer compatibility and technique."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 3],
+          "recommendedUse": ["moderate lightening reference"],
+          "restrictions": ["Monitor lift visually; avoid compromised hair."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 4],
+          "recommendedUse": ["higher lift reference"],
+          "restrictions": ["High-risk use; avoid scalp-sensitive and high-damage cases."]
+        }
+      ],
+      "restrictions": [
+        "This Skylight entry is partial and cannot output precise grams.",
+        "Do not use on high-damage, repeated-bleach or black-dye-residue cases without senior stylist assessment."
+      ],
+      "warnings": [
+        "No heat and maximum timing must be confirmed against current official material before verification."
+      ]
+    }
+  }
+]

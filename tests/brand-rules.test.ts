@@ -35,4 +35,27 @@ describe("brand rules", () => {
       expect(rule.rules.developerRules.length).toBeGreaterThan(0);
     }
   });
+
+  it("keeps Canbran Paul Mitchell candidates conservative", () => {
+    const canbranRules = getBrandRules().filter(
+      (rule) => rule.brandId === "canbran-paul-mitchell",
+    );
+
+    expect(canbranRules.map((rule) => rule.productLineId).sort()).toEqual([
+      "paul-mitchell-color-xg",
+      "paul-mitchell-skylight",
+      "paul-mitchell-the-color-10",
+      "paul-mitchell-the-demi",
+    ]);
+    expect(canbranRules.every((rule) => rule.verified !== "verified")).toBe(
+      true,
+    );
+    expect(
+      canbranRules.every((rule) =>
+        rule.rules.restrictions.some((restriction) =>
+          restriction.includes("cannot output precise grams"),
+        ),
+      ),
+    ).toBe(true);
+  });
 });

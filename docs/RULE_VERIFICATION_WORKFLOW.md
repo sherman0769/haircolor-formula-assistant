@@ -38,6 +38,23 @@
 - Schwarzkopf IGORA ROYAL core 補入官方產品頁，但完整 core 配方仍需官方技術手冊確認，維持 `partial`。
 - Schwarzkopf IGORA ROYAL ABSOLUTES 新增為獨立產品線；官方資料提供單一 mixing ratio 與 developer/time guidance，因此可標示為 `verified`。
 
+## 肯邦 / Paul Mitchell 候選產品線
+
+本次先將肯邦代理線中適合放進染劑選項的 Paul Mitchell 產品線加為候選：
+
+- The Color XG 超世代艷彩染髮劑：`partial`
+- The Demi 幻彩染：`partial`
+- The Color 10 絕彩瞬色白髮染：`unverified`
+- Skylight 手刷漂染專用明度調整粉：`partial`
+
+這批資料只作為前台選項與方向性資料，不輸出精確克數。升級前必須補齊：
+
+- 肯邦或 Paul Mitchell 官方現行技術手冊。
+- 台灣現行供應與法規/許可狀態。
+- 混合比例、指定雙氧或處理液、停留時間、頭皮限制、漂染限制。
+- 白髮覆蓋或灰髮霧化的產品線專屬規則。
+- 對應測試案例，確認 `partial` / `unverified` 升級前仍會阻擋精確配方。
+
 ## 實務原則
 
 寧可保守維持 `partial`，也不要讓系統用未完整建模的資料產生看似精確的克數。

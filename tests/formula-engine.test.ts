@@ -96,6 +96,34 @@ describe("calculateFormula", () => {
     expect(output.formulaItems[0].role).toBe("reference");
   });
 
+  it("does not output precise grams for Canbran Paul Mitchell candidate lines", () => {
+    const candidateLines: Array<{
+      productLineId: string;
+      serviceType: FormulaInput["serviceType"];
+    }> = [
+      { productLineId: "paul-mitchell-color-xg", serviceType: "permanent" },
+      { productLineId: "paul-mitchell-the-demi", serviceType: "post-fade-toning" },
+      { productLineId: "paul-mitchell-the-color-10", serviceType: "grey-coverage" },
+      { productLineId: "paul-mitchell-skylight", serviceType: "bleach" },
+    ];
+
+    for (const candidate of candidateLines) {
+      const output = calculateFormula(
+        buildInput({
+          brandId: "canbran-paul-mitchell",
+          productLineId: candidate.productLineId,
+          serviceType: candidate.serviceType,
+        }),
+      );
+
+      expect(output.totalColorGrams).toBeNull();
+      expect(output.totalDeveloperGrams).toBeNull();
+      expect(output.formulaItems[0].role).toBe("reference");
+      expect(output.confidenceLevel).toBe("low");
+      expect(output.riskWarnings.join(" ")).toContain("品牌資料未完整 verified");
+    }
+  });
+
   it("blocks precise grams for high-risk black dye lift", () => {
     const output = calculateFormula(
       buildInput({
