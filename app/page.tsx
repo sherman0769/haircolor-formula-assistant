@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, BookOpen, Calculator, ShieldCheck, Sparkles } from "lucide-react";
 import { SafetyNotice } from "@/components/SafetyNotice";
 
 const entryLinks = [
@@ -6,52 +8,84 @@ const entryLinks = [
     href: "/formula",
     title: "開始計算配方",
     description: "輸入髮況、目標色與操作條件，取得規則引擎建議。",
+    icon: Calculator,
   },
   {
     href: "/brands",
     title: "查看品牌規則",
     description: "檢視內建產品線的混合比例、雙氧與資料來源狀態。",
+    icon: BookOpen,
   },
   {
     href: "/about",
     title: "使用說明與安全提醒",
     description: "確認工具定位、資料限制與人工判斷流程。",
+    icon: ShieldCheck,
   },
 ];
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10">
-      <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <p className="text-sm font-semibold text-accent">
-              美髮設計師配方輔助工具
+    <>
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/salon-color-workspace.svg"
+            alt="現代沙龍染髮色彩工作台"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,24,23,0.88),rgba(20,24,23,0.60),rgba(20,24,23,0.18))]" />
+        </div>
+        <div className="mx-auto flex min-h-[68svh] max-w-6xl items-center px-4 py-12">
+          <div className="max-w-2xl space-y-6 text-background">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-semibold backdrop-blur">
+              <Sparkles aria-hidden="true" className="size-4" />
+              沙龍設計師配方輔助
             </p>
-            <h1 className="text-4xl font-semibold tracking-normal text-foreground sm:text-5xl">
-              染髮配方計算器
+            <h1 className="text-4xl font-semibold tracking-normal sm:text-5xl">
+              HairColor Formula Assistant
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-muted-foreground">
-              給美髮設計師使用的配方輔助工具。
+            <p className="max-w-xl text-base leading-8 text-white/85 sm:text-lg">
+              美髮染髮配方助理。把髮況、目標色與品牌規則整理成可判讀的配方方向、雙氧建議與風險提醒。
             </p>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-3">
-            {entryLinks.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-lg border border-border bg-panel p-4 transition hover:border-accent hover:shadow-sm"
-              >
-                <h2 className="text-base font-semibold">{item.title}</h2>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  {item.description}
-                </p>
-              </Link>
-            ))}
+            <Link
+              href="/formula"
+              className="inline-flex h-12 items-center gap-2 rounded-md bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-lg shadow-black/20 hover:bg-teal-800"
+            >
+              開始計算
+              <ArrowRight aria-hidden="true" className="size-4" />
+            </Link>
           </div>
         </div>
-        <SafetyNotice compact />
       </section>
-    </div>
+
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+        <section className="grid gap-6 lg:grid-cols-[1fr_380px] lg:items-start">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {entryLinks.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg border border-border bg-panel p-4 shadow-sm transition hover:border-accent hover:shadow-md"
+                >
+                  <Icon aria-hidden="true" className="mb-4 size-5 text-accent" />
+                  <h2 className="text-base font-semibold">{item.title}</h2>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                    {item.description}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+          <SafetyNotice compact />
+        </section>
+      </div>
+    </>
   );
 }

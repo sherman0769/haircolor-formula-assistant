@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
+import { MobileNav } from "@/components/MobileNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +16,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "染髮配方計算器",
+  metadataBase: new URL("https://haircolor-formula-assistant.vercel.app"),
+  title: {
+    default: "HairColor Formula Assistant",
+    template: "%s｜HairColor Formula Assistant",
+  },
   description: "給美髮設計師使用的染髮配方輔助工具",
+  openGraph: {
+    title: "HairColor Formula Assistant",
+    description: "美髮染髮配方助理，提供配方方向、雙氧建議、風險提醒與信心等級。",
+    siteName: "HairColor Formula Assistant",
+    locale: "zh_TW",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HairColor Formula Assistant",
+    description: "美髮染髮配方助理，給專業設計師的配方輔助工具。",
+  },
 };
 
 const navItems = [
@@ -36,17 +54,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="font-sans antialiased">
-        <header className="border-b border-border bg-panel/90">
-          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-            <Link href="/" className="text-base font-semibold tracking-normal">
-              染髮配方計算器
+        <header className="sticky top-0 z-40 border-b border-border bg-panel/90 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+            <Link href="/" aria-label="HairColor Formula Assistant 首頁">
+              <BrandLogo />
             </Link>
-            <nav className="flex flex-wrap gap-2 text-sm text-muted-foreground">
+            <nav className="hidden flex-wrap gap-1 text-sm text-muted-foreground md:flex">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-md px-3 py-2 hover:bg-muted hover:text-foreground"
+                  className="rounded-md px-3 py-2 font-medium hover:bg-muted hover:text-foreground"
                 >
                   {item.label}
                 </Link>
@@ -54,7 +72,8 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main>{children}</main>
+        <main className="pb-24 md:pb-0">{children}</main>
+        <MobileNav />
       </body>
     </html>
   );

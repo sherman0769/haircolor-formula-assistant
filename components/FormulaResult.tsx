@@ -1,4 +1,5 @@
 import { RiskBadges } from "@/components/RiskBadges";
+import { ResultActions } from "@/components/ResultActions";
 import type { FormulaOutput } from "@/lib/types";
 
 type FormulaResultProps = {
@@ -51,6 +52,9 @@ export function FormulaResult({ result }: FormulaResultProps) {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-4">
+          <ResultActions result={result} />
         </div>
       </section>
 

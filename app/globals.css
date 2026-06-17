@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5ef;
+  --background: #f3f0ea;
   --foreground: #1f2328;
-  --muted: #ece8df;
-  --muted-foreground: #5f666f;
-  --border: #d9d3c8;
+  --muted: #ebe5da;
+  --muted-foreground: #5b625f;
+  --border: #d5cdc0;
   --panel: #fffdfa;
   --accent: #0f766e;
   --accent-foreground: #f8fafc;
+  --copper: #9b5c2f;
   --danger: #b42318;
   --warning: #b7791f;
 }
@@ -22,6 +23,7 @@
   --color-panel: var(--panel);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-copper: var(--copper);
   --color-danger: var(--danger);
   --color-warning: var(--warning);
   --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
@@ -39,8 +41,14 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background: var(--background);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 250, 0.92), rgba(243, 240, 234, 1) 38rem),
+    var(--background);
   color: var(--foreground);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 button,

@@ -14,7 +14,7 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
+    <div className="mx-auto max-w-5xl px-4 py-8 sm:py-10">
       <div className="space-y-3">
         <p className="text-sm font-semibold text-accent">使用說明與安全提醒</p>
         <h1 className="text-3xl font-semibold tracking-normal">

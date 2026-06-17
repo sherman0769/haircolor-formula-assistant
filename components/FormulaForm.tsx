@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Calculator } from "lucide-react";
 import { DeveloperSelector } from "@/components/DeveloperSelector";
 import { FormulaResult } from "@/components/FormulaResult";
 import { GreyCoverageInput } from "@/components/GreyCoverageInput";
@@ -40,11 +41,11 @@ import type {
 } from "@/lib/types";
 
 function fieldClass() {
-  return "mt-2 h-11 w-full rounded-md border border-border bg-panel px-3 text-sm outline-none focus:border-accent";
+  return "mt-2 h-12 w-full rounded-md border border-border bg-panel px-3 text-base outline-none focus:border-accent sm:text-sm";
 }
 
 function sectionClass() {
-  return "rounded-lg border border-border bg-panel p-5";
+  return "rounded-lg border border-border bg-panel p-4 shadow-sm sm:p-5";
 }
 
 export function FormulaForm() {
@@ -388,8 +389,9 @@ export function FormulaForm() {
           </p>
           <button
             type="submit"
-            className="h-11 rounded-md bg-accent px-5 text-sm font-semibold text-accent-foreground hover:bg-teal-800"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-sm hover:bg-teal-800"
           >
+            <Calculator aria-hidden="true" className="size-4" />
             計算配方
           </button>
         </div>
