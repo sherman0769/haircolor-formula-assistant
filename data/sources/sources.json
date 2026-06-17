@@ -220,6 +220,46 @@
     "notes": "Official Paul Mitchell professional color portfolio page. It confirms color-service positioning but does not expose full product-line rules."
   },
   {
+    "id": "paul-mitchell-color-xg-elearning",
+    "title": "Getting Started with Color XG",
+    "publisher": "Paul Mitchell eLearning",
+    "sourceType": "official_education_page",
+    "url": "https://elearning.paulmitchell.com/courses/getting-started-with-color-xg",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell education page confirms Color XG positioning, gray coverage/natural/cool-tone education and that the course covers mixing guidelines; detailed rules are not publicly exposed."
+  },
+  {
+    "id": "paul-mitchell-xg-family-elearning",
+    "title": "XG Family Product Knowledge",
+    "publisher": "Paul Mitchell eLearning",
+    "sourceType": "official_education_page",
+    "url": "https://elearning.paulmitchell.com/courses/xg-family-product-knowledge",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell course page confirms Color XG family product knowledge, 100% gray coverage positioning and formulation/mixing education; full technical content requires course access."
+  },
+  {
+    "id": "paul-mitchell-the-demi-elearning",
+    "title": "The Demi Product Knowledge",
+    "publisher": "Paul Mitchell eLearning",
+    "sourceType": "official_education_page",
+    "url": "https://elearning.paulmitchell.com/courses/the-demi-product-knowledge",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell education page confirms The Demi as no-ammonia demi-permanent hair color and references formulation/mixing techniques; full ratios require course/manual access."
+  },
+  {
+    "id": "paul-mitchell-gray-hair-official-article",
+    "title": "How-To: Cover or Enhance Gray Hair",
+    "publisher": "Paul Mitchell",
+    "sourceType": "official_web",
+    "url": "https://www.paulmitchell.com/blogs/inspiration/how-to-cover-or-enhance-gray-hair",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell article distinguishes permanent color for full gray coverage from demi-permanent color for gray blending/enhancement."
+  },
+  {
     "id": "paul-mitchell-the-color-10-elearning",
     "title": "Paul Mitchell The Color 10 Product Knowledge",
     "publisher": "Paul Mitchell eLearning",
@@ -227,7 +267,17 @@
     "url": "https://elearning.paulmitchell.com/courses/pm-the-color-10-minute-product-knowledge",
     "retrievedAt": "2026-06-18",
     "verification": "partial",
-    "notes": "Official education page confirms The Color 10 positioning. Full course content and Canbran Taiwan availability still require manual verification."
+    "notes": "Official education page confirms The Color 10 slight lift, up to 100% gray coverage and 10-minute positioning. Full mixing rules and Canbran Taiwan availability still require manual verification."
+  },
+  {
+    "id": "paul-mitchell-blonding-official-page",
+    "title": "Paul Mitchell Blonding",
+    "publisher": "Paul Mitchell Pro",
+    "sourceType": "official_brand_page",
+    "url": "https://pro.paulmitchell.com/blonding",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Paul Mitchell Pro blonding page confirms current public blonding portfolio and toning direction. Skylight was not visible on this public page during review."
   },
   {
     "id": "paul-mitchell-skylight-cosmoprof",

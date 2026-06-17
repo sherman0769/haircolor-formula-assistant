@@ -16,13 +16,15 @@
     "sourceIds": [
       "canbran-paul-mitchell-brand-page",
       "paul-mitchell-professional-hair-color-page",
+      "paul-mitchell-color-xg-elearning",
+      "paul-mitchell-xg-family-elearning",
       "taiwan-special-cosmetic-license-canbran-paul-mitchell"
     ],
-    "sourceTitle": "Canbran Paul Mitchell brand page and public product-license references",
-    "sourceType": "official_brand_page + official_brand_page + public_data_mirror",
+    "sourceTitle": "Canbran Paul Mitchell brand page, Paul Mitchell Color XG official education pages and public product-license references",
+    "sourceType": "official_brand_page + official_education_page + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "確認可作為肯邦 / Paul Mitchell 染劑候選產品線；完整台灣官方技術手冊、現行許可與教育規則尚未補齊。",
-    "notes": "Interim product-line option only. Do not output precise grams until official Canbran or Paul Mitchell technical manual data is added.",
+    "sourceNote": "Paul Mitchell 官方教育頁確認 Color XG 是永久染膏系統，涵蓋灰髮、自然色與冷色表現，並有混合與配方教育；完整比例、停留時間、台灣現行供應與許可仍需官方手冊或登入課程補齊。",
+    "notes": "Interim product-line option only. Public official pages confirm product positioning, but not enough public technical detail to output precise grams.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -35,10 +37,10 @@
           "processingTimeMin": 25,
           "processingTimeMax": 45,
           "conditions": [
-            "Permanent color candidate for Paul Mitchell Color XG services."
+            "Permanent vegan cream color candidate for Paul Mitchell Color XG services."
           ],
           "warnings": [
-            "Partial public reference only. Confirm current Canbran or Paul Mitchell technical manual before use."
+            "Paul Mitchell public education page confirms the Color XG course covers mixing guidelines and recommended formulas, but the detailed rules are not exposed publicly."
           ]
         },
         {
@@ -65,7 +67,7 @@
           "processingTimeMin": 35,
           "processingTimeMax": 45,
           "conditions": [
-            "Grey coverage candidate where official shade family and base support rules are available."
+            "Grey coverage candidate; Paul Mitchell education material positions Color XG for gray coverage and natural/cool tone work."
           ],
           "warnings": [
             "Natural base ratio and resistant grey rules are not verified for this MVP entry."
@@ -134,7 +136,7 @@
       ],
       "restrictions": [
         "This Canbran / Paul Mitchell Color XG entry is partial and cannot output precise grams.",
-        "Current official Taiwan technical manual and product availability must be confirmed before upgrading."
+        "Current official Taiwan technical manual, shade family rules, developer rules and product availability must be confirmed before upgrading."
       ],
       "warnings": [
         "Use only as a product-line option and directional reference until verified."
@@ -158,13 +160,15 @@
       "canbran-paul-mitchell-brand-page",
       "canbran-paul-mitchell-the-demi-page",
       "paul-mitchell-professional-hair-color-page",
+      "paul-mitchell-the-demi-elearning",
+      "paul-mitchell-gray-hair-official-article",
       "taiwan-special-cosmetic-license-canbran-paul-mitchell"
     ],
-    "sourceTitle": "Canbran The Demi campaign page and Paul Mitchell professional color portfolio",
-    "sourceType": "brand_campaign_page + official_brand_page + public_data_mirror",
+    "sourceTitle": "Canbran The Demi campaign page and Paul Mitchell The Demi official education references",
+    "sourceType": "brand_campaign_page + official_education_page + official_web + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "確認 The Demi 可作為半永久、補色、矯色與光澤染候選；混合處理液比例與停留規則仍需官方手冊。",
-    "notes": "The Demi should be treated as deposit/toning/correction direction in the MVP, not a lift or full grey-coverage engine.",
+    "sourceNote": "Canbran 頁確認 The Demi 可用於保鮮、增豔、矯色、色彩校正與灰髮霧化方向；Paul Mitchell 官方教育頁確認 The Demi 為無氨 demi-permanent 快速色彩服務。混合處理液比例與完整停留規則仍需官方手冊或登入課程。",
+    "notes": "The Demi should be treated as deposit/toning/correction and grey-blending direction in the MVP, not a lift or full grey-coverage engine.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -177,7 +181,7 @@
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
-            "Deposit-only toning or color refresh candidate after lightening or fading."
+            "Deposit-only toning, color refresh or shine service candidate after lightening or fading."
           ],
           "warnings": [
             "Use only with the correct The Demi processing liquid or developer specified by the official manual."
@@ -222,10 +226,10 @@
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
-            "Grey blending or soft grey diffusion candidate, not guaranteed full coverage."
+            "Grey blending or soft grey diffusion candidate; Paul Mitchell public article distinguishes full gray coverage from demi-permanent gray blending."
           ],
           "warnings": [
-            "Do not present The Demi as full white-hair coverage unless official education confirms the technique."
+            "Do not present The Demi as full white-hair coverage; treat as gray blending/enhancement unless official education confirms a specific coverage technique."
           ]
         }
       ],
@@ -264,7 +268,7 @@
       "grey-coverage",
       "retouch"
     ],
-    "verified": "unverified",
+    "verified": "partial",
     "sourceIds": [
       "canbran-paul-mitchell-brand-page",
       "paul-mitchell-the-color-10-elearning"
@@ -272,8 +276,8 @@
     "sourceTitle": "Paul Mitchell The Color 10 education page with Canbran brand context",
     "sourceType": "official_education_page + official_brand_page",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "Paul Mitchell 官方教育頁確認 The Color 10 定位；肯邦台灣端現行販售、完整技術手冊與色號仍待人工確認。",
-    "notes": "Keep unverified until current Canbran Taiwan product availability and official technical rules are obtained.",
+    "sourceNote": "Paul Mitchell 官方教育頁確認 The Color 10 是快速白髮服務，提供輕微提淺、最高白髮覆蓋與 10 分鐘處理時間方向；混合比例與完整配方步驟在課程/手冊中，公開頁未完整揭露。",
+    "notes": "Partial official positioning only. Keep blocked until current Canbran Taiwan availability, shade rules and exact mixing instructions are obtained.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -286,10 +290,10 @@
           "processingTimeMin": 10,
           "processingTimeMax": 10,
           "conditions": [
-            "Express grey service candidate only after confirming official shade family and developer."
+            "Express grey service candidate. Official Paul Mitchell education page confirms slight lift, up to 100% gray coverage and fast 10-minute processing."
           ],
           "warnings": [
-            "This MVP entry uses product-positioning data only; do not output exact formula."
+            "Public official page does not expose exact mixing ratio, shade family rules or developer selection."
           ]
         },
         {
@@ -301,7 +305,7 @@
           "processingTimeMin": 10,
           "processingTimeMax": 10,
           "conditions": [
-            "Express retouch candidate where official education confirms use."
+            "Express retouch candidate for time-sensitive guests where official education confirms use."
           ],
           "warnings": [
             "Confirm current Canbran Taiwan supply and official processing rules."
@@ -318,8 +322,8 @@
         }
       ],
       "restrictions": [
-        "This The Color 10 entry is unverified and cannot output precise grams.",
-        "Do not use until current Canbran Taiwan product availability and official manual are confirmed."
+        "This The Color 10 entry is partial and cannot output precise grams.",
+        "Do not use for exact formulas until current Canbran Taiwan product availability and official manual are confirmed."
       ],
       "warnings": [
         "Temporary product option only. Senior stylist confirmation and strand test required."
@@ -338,14 +342,15 @@
     "verified": "partial",
     "sourceIds": [
       "canbran-paul-mitchell-brand-page",
+      "paul-mitchell-blonding-official-page",
       "paul-mitchell-skylight-cosmoprof",
       "taiwan-special-cosmetic-license-canbran-paul-mitchell"
     ],
-    "sourceTitle": "Paul Mitchell Skylight professional supplier page and Canbran public product-license reference",
-    "sourceType": "professional_supplier_page + official_brand_page + public_data_mirror",
+    "sourceTitle": "Paul Mitchell official blonding page review, Skylight supplier page and Canbran public product-license reference",
+    "sourceType": "official_brand_page + professional_supplier_page + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "確認可作為 Paul Mitchell 手刷漂染候選；完整官方技術手冊、頭皮限制與台灣現行供應仍需補齊。",
-    "notes": "Lightener candidate only. The MVP must block precise grams while partial.",
+    "sourceNote": "目前公開 Paul Mitchell Pro blonding 頁確認現行金髮/漂染產品線方向，但未見 Skylight；Skylight 仍依供應商頁與公開許可資料作候選，需肯邦或 Paul Mitchell 現行官方手冊確認。",
+    "notes": "Lightener candidate only. Do not upgrade until Skylight current Taiwan supply and official technical manual are confirmed.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -358,10 +363,10 @@
           "processingTimeMin": 5,
           "processingTimeMax": 50,
           "conditions": [
-            "Freehand lightening or balayage candidate."
+            "Freehand lightening or balayage candidate; current Paul Mitchell official blonding page should be checked before use because public page did not expose Skylight."
           ],
           "warnings": [
-            "Lightener work is high risk; official manual and strand test required before exact formula."
+            "Lightener work is high risk; official Canbran or Paul Mitchell Skylight manual and strand test required before exact formula."
           ]
         }
       ],
@@ -393,7 +398,7 @@
         "Do not use on high-damage, repeated-bleach or black-dye-residue cases without senior stylist assessment."
       ],
       "warnings": [
-        "No heat and maximum timing must be confirmed against current official material before verification."
+        "Skylight was not visible on the current public Paul Mitchell Pro blonding page during this check; confirm current supply and manual before verification."
       ]
     }
   }

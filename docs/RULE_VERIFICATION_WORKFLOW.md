@@ -44,7 +44,7 @@
 
 - The Color XG 超世代艷彩染髮劑：`partial`
 - The Demi 幻彩染：`partial`
-- The Color 10 絕彩瞬色白髮染：`unverified`
+- The Color 10 絕彩瞬色白髮染：`partial`
 - Skylight 手刷漂染專用明度調整粉：`partial`
 
 這批資料只作為前台選項與方向性資料，不輸出精確克數。升級前必須補齊：
@@ -54,6 +54,15 @@
 - 混合比例、指定雙氧或處理液、停留時間、頭皮限制、漂染限制。
 - 白髮覆蓋或灰髮霧化的產品線專屬規則。
 - 對應測試案例，確認 `partial` / `unverified` 升級前仍會阻擋精確配方。
+
+## 肯邦 / Paul Mitchell 官方公開資料查核
+
+2026-06-18 已查核 Paul Mitchell 與肯邦公開頁：
+
+- Color XG：Paul Mitchell eLearning 官方頁確認 Color XG 課程涵蓋灰髮、自然色、冷色、混合指引與建議配方，但完整內容在課程內，公開頁未揭露可直接建模的比例、雙氧與停留規則，維持 `partial`。
+- The Demi：肯邦 The Demi 頁確認保鮮、增豔、矯色、色彩校正與灰髮霧化方向；Paul Mitchell eLearning 確認 The Demi 是無氨 demi-permanent 快速色彩服務，但公開頁未揭露完整混合規則，維持 `partial`。
+- The Color 10：Paul Mitchell eLearning 公開頁確認 10 分鐘、輕微提淺與最高白髮覆蓋方向，因此從 `unverified` 升為 `partial`；仍缺公開混合比例、色號族群與台灣肯邦現行供應確認。
+- Skylight：目前公開 Paul Mitchell Pro blonding 頁未見 Skylight，只能以供應商頁與公開許可資料作候選，維持 `partial`，不得升級。
 
 ## 實務原則
 
