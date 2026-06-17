@@ -160,30 +160,30 @@
   {
     "brandId": "wella",
     "brandName": "Wella Professionals",
-    "productLineId": "blondor-lightener",
-    "productLineName": "Blondor / Lightener Structure",
-    "region": "Global seed / verify current product",
+    "productLineId": "blondor-multiblonde-powder",
+    "productLineName": "Blondor Multi Blonde Powder",
+    "region": "Official Wella PDF / verify local region",
     "serviceTypes": ["bleach"],
     "verified": "partial",
-    "sourceIds": ["wella-blondor-usage-booklet"],
-    "sourceTitle": "Blondor Usage Booklet",
-    "sourceType": "official_pdf_partial",
-    "retrievedAt": "2026-06-17",
+    "sourceIds": ["wella-blondor-fact-sheet", "wella-blondor-usage-booklet"],
+    "sourceTitle": "Blondor Fact Sheet",
+    "sourceType": "official_pdf",
+    "retrievedAt": "2026-06-18",
     "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
-    "notes": "Structure only for first version. Product generation and exact lightener variant must be confirmed.",
+    "notes": "Official-source seed for Blondor Multi Blonde Powder. Kept partial because the official mixing ratio is a range and the current engine does not yet support stylist-selected consistency.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
         {
-          "id": "wella-blondor-bleach-reference",
+          "id": "wella-blondor-multiblonde-powder-bleach",
           "serviceType": "bleach",
           "ratio": 2,
-          "ratioLabel": "1:1.5-1:2 reference",
+          "ratioLabel": "1:1.5-1:2",
           "allowedDevelopers": [1.9, 4, 6, 9, 12],
           "processingTimeMin": 5,
           "processingTimeMax": 50,
-          "conditions": ["Lightener consistency and technique vary by Blondor product."],
-          "warnings": ["Do not exceed official maximum processing time; check development visually."]
+          "conditions": ["Blondor Multi Blonde Powder for on- and off-scalp lightening where product instructions allow."],
+          "warnings": ["For on-scalp application, keep developer at 6% or below. Do not exceed 50 minutes; check development visually."]
         }
       ],
       "developerRules": [
@@ -223,8 +223,50 @@
           "restrictions": ["High risk; not for compromised hair or scalp-adjacent work."]
         }
       ],
-      "restrictions": ["Partial data only; exact Blondor product variant must be selected before service."],
-      "warnings": ["The app will only show reference direction for this partial lightener seed."]
+      "restrictions": ["For on-scalp application, use 6% or below. Do not exceed official maximum development time."],
+      "warnings": ["Lightener work remains high risk and must be monitored visually by a professional stylist."]
+    }
+  },
+  {
+    "brandId": "wella",
+    "brandName": "Wella Professionals",
+    "productLineId": "blondor-soft-blonde-cream",
+    "productLineName": "Blondor Soft Blonde Cream",
+    "region": "Official Wella PDF / verify local region",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": ["wella-blondor-fact-sheet"],
+    "sourceTitle": "Blondor Fact Sheet",
+    "sourceType": "official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Official-source seed for Blondor Soft Blonde Cream. Kept partial because the official mixing ratio is a range and the current engine does not yet support stylist-selected consistency.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "wella-blondor-soft-blonde-cream-bleach",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1.5-1:2",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 5,
+          "processingTimeMax": 50,
+          "conditions": ["Blondor Soft Blonde Cream for gentle on-scalp lightening where product instructions allow."],
+          "warnings": ["Use 6% on scalp. Do not exceed 50 minutes; check development visually."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [2, 7],
+          "recommendedUse": ["on-scalp cream lightening when permitted"],
+          "restrictions": ["Confirm scalp condition and product compatibility before use."]
+        }
+      ],
+      "restrictions": ["Use 6% for on-scalp application. Do not use on irritated, sensitive or compromised scalp."],
+      "warnings": ["Cream lightener work remains high risk and requires visual monitoring and strand testing."]
     }
   }
 ]

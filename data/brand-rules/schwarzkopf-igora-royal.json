@@ -7,12 +7,15 @@
     "region": "Professional supplier seed / verify local region",
     "serviceTypes": ["permanent", "retouch", "grey-coverage", "high-lift", "color-correction"],
     "verified": "partial",
-    "sourceIds": ["schwarzkopf-igora-salon-services-manual"],
-    "sourceTitle": "IGORA ROYAL Technical Manual",
-    "sourceType": "professional_supplier_pdf",
-    "retrievedAt": "2026-06-17",
+    "sourceIds": [
+      "schwarzkopf-igora-official-page",
+      "schwarzkopf-igora-salon-services-manual"
+    ],
+    "sourceTitle": "IGORA ROYAL Official Product Page and Technical Manual",
+    "sourceType": "official_web_and_professional_supplier_pdf_partial_rule",
+    "retrievedAt": "2026-06-18",
     "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
-    "notes": "Supplier-hosted technical manual seed. Marked partial until current official regional manual is reviewed.",
+    "notes": "Core IGORA ROYAL remains partial: official product page confirms current portfolio and coverage claims, while exact core formulation still needs current official regional technical manual review.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -119,6 +122,106 @@
       ],
       "restrictions": ["Partial source; exact grams are blocked until verified data is entered."],
       "warnings": ["Use current Schwarzkopf Professional technical manual for final formula."]
+    }
+  },
+  {
+    "brandId": "schwarzkopf",
+    "brandName": "Schwarzkopf Professional",
+    "productLineId": "igora-royal-absolutes",
+    "productLineName": "IGORA ROYAL ABSOLUTES",
+    "region": "Official Schwarzkopf Professional US / verify local region",
+    "serviceTypes": ["permanent", "retouch", "grey-coverage"],
+    "verified": "verified",
+    "sourceIds": [
+      "schwarzkopf-igora-absolutes-official-page",
+      "schwarzkopf-igora-absolutes-technical-manual"
+    ],
+    "sourceTitle": "IGORA ROYAL ABSOLUTES Official Product Page and Technical Manual",
+    "sourceType": "official_web_and_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Verified sub-line seed for IGORA ROYAL ABSOLUTES. Official page states 1:1 mixing, 9% developer, 30-45 minute development and up to 100% white hair coverage; it also notes 6% for pure color deposit on more than 90% white hair.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "schwarzkopf-igora-absolutes-permanent-1-1",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [9],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["IGORA ROYAL ABSOLUTES permanent color service for mature hair coverage."],
+          "warnings": ["For pure color deposit on more than 90% white hair, use 6% / 20 vol as official notes indicate."]
+        },
+        {
+          "id": "schwarzkopf-igora-absolutes-retouch-1-1",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [6, 9],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["Regrowth retouch with IGORA ROYAL ABSOLUTES where coverage support is needed."],
+          "warnings": ["Avoid unnecessary overlap on previously colored porous lengths."]
+        },
+        {
+          "id": "schwarzkopf-igora-absolutes-grey-coverage-1-1",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [6, 9],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["White hair coverage service with IGORA ROYAL ABSOLUTES."],
+          "warnings": ["Heat is not needed or recommended for white coverage according to official FAQ."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [0, 1],
+          "recommendedUse": ["pure color deposit on more than 90% white hair", "coverage support"],
+          "restrictions": ["Use where official instructions call for deposit-focused coverage."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [1, 3],
+          "recommendedUse": ["standard IGORA ROYAL ABSOLUTES service", "coverage with lift"],
+          "restrictions": ["Assess scalp sensitivity and hair integrity before use."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "ABSOLUTES is a coverage line; do not auto-add extra natural base unless current brand instructions require it."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "ABSOLUTES is a coverage line; shade selection remains a professional decision."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "ABSOLUTES is a coverage line; formula direction should follow official shade guide."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "For more than 90% white hair and pure color deposit, official notes indicate 6% / 20 vol."
+        }
+      ],
+      "restrictions": ["Use the current regional IFU and allergy precautions before service."],
+      "warnings": ["Final shade selection, saturation and timing remain professional responsibilities."]
     }
   }
 ]

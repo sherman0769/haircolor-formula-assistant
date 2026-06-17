@@ -67,6 +67,35 @@ describe("calculateFormula", () => {
     expect(output.confidenceLevel).toBe("low");
   });
 
+  it("calculates precise grams for verified IGORA ROYAL ABSOLUTES", () => {
+    const output = calculateFormula(
+      buildInput({
+        brandId: "schwarzkopf",
+        productLineId: "igora-royal-absolutes",
+      }),
+    );
+
+    expect(output.mixingRatio).toBe("1:1");
+    expect(output.totalColorGrams).toBe(60);
+    expect(output.totalDeveloperGrams).toBe(60);
+    expect(output.developer.developerPercent).toBe(9);
+  });
+
+  it("keeps official-source flexible-ratio lighteners partial", () => {
+    const output = calculateFormula(
+      buildInput({
+        brandId: "wella",
+        productLineId: "blondor-multiblonde-powder",
+        serviceType: "bleach",
+      }),
+    );
+
+    expect(output.mixingRatio).toBe("1:1.5-1:2");
+    expect(output.totalColorGrams).toBeNull();
+    expect(output.totalDeveloperGrams).toBeNull();
+    expect(output.formulaItems[0].role).toBe("reference");
+  });
+
   it("blocks precise grams for high-risk black dye lift", () => {
     const output = calculateFormula(
       buildInput({

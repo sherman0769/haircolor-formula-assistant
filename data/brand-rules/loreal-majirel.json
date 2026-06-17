@@ -176,7 +176,7 @@
     "sourceType": "official_pdf_partial",
     "retrievedAt": "2026-06-17",
     "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
-    "notes": "Blond Studio has several techniques and product forms; first version keeps it partial.",
+    "notes": "Blond Studio has several techniques and product forms. Official sheet provides developer and ratio ranges, but current engine cannot yet model technique-specific ratio selection, so this remains partial.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -215,8 +215,8 @@
           "restrictions": ["Not for scalp-adjacent work unless official instructions specifically allow."]
         }
       ],
-      "restrictions": ["Partial data only; exact Blond Studio product must be selected."],
-      "warnings": ["This product line only outputs reference direction in version one."]
+      "restrictions": ["Partial rule: exact Blond Studio product and technique must be selected before precise grams can be generated."],
+      "warnings": ["This product line only outputs reference direction until ratio-range and technique selection are supported."]
     }
   }
 ]

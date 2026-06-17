@@ -3,29 +3,33 @@
     "brandId": "schwarzkopf",
     "brandName": "Schwarzkopf Professional",
     "productLineId": "blondme-premium-lightener",
-    "productLineName": "BLONDME Premium Lightener",
-    "region": "Brand media seed / verify local region",
+    "productLineName": "BLONDME Premium Lightener 9+",
+    "region": "Official Schwarzkopf Professional GB / verify local region",
     "serviceTypes": ["bleach"],
     "verified": "partial",
-    "sourceIds": ["skp-blondme-service-manual"],
-    "sourceTitle": "BLONDME Service Manual",
-    "sourceType": "brand_media_pdf",
-    "retrievedAt": "2026-06-17",
+    "sourceIds": [
+      "schwarzkopf-blondme-official-premium-lightener-9",
+      "schwarzkopf-blondme-official-service-manual",
+      "schwarzkopf-blondme-official-technical-booklet"
+    ],
+    "sourceTitle": "BLONDME Premium Lightener 9+ Official Product Page and Service Manual",
+    "sourceType": "official_web_and_pdf_partial_rule",
+    "retrievedAt": "2026-06-18",
     "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
-    "notes": "Partial seed for BLONDME Premium Lightener. Exact product generation and developer system must be checked.",
+    "notes": "Official-source seed for BLONDME Premium Lightener 9+. Kept partial because official mixing ratio is flexible 1:1.5-1:2.5 and current engine cannot yet model technique-specific consistency.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
         {
-          "id": "schwarzkopf-blondme-premium-reference",
+          "id": "schwarzkopf-blondme-premium-lightener-9-reference",
           "serviceType": "bleach",
           "ratio": 2,
-          "ratioLabel": "1:1.5-1:2.5 reference",
+          "ratioLabel": "1:1.5-1:2.5",
           "allowedDevelopers": [2, 6, 9],
           "processingTimeMin": 20,
           "processingTimeMax": 45,
           "conditions": ["BLONDME lightening service with compatible Premium Developer."],
-          "warnings": ["Check development visually; heat is not recommended in common BLONDME guidance."]
+          "warnings": ["9% / 30 vol is off-scalp only. Additional heat is not recommended. Check development visually every 5 minutes."]
         }
       ],
       "developerRules": [
@@ -51,8 +55,8 @@
           "restrictions": ["Avoid compromised hair."]
         }
       ],
-      "restrictions": ["Partial source; exact grams are blocked until current official data is verified."],
-      "warnings": ["Do not force precise formulas for BLONDME until product-specific data is confirmed."]
+      "restrictions": ["Partial rule: official source uses a ratio range, so exact grams are blocked until the engine supports ratio selection."],
+      "warnings": ["Do not force precise formulas for BLONDME until product-specific ratio and technique are selected by a professional."]
     }
   },
   {
@@ -60,15 +64,19 @@
     "brandName": "Schwarzkopf Professional",
     "productLineId": "blondme-clay-lightener",
     "productLineName": "BLONDME Clay Lightener",
-    "region": "Professional supplier seed / verify local region",
+    "region": "Official Schwarzkopf Professional GB / verify local region",
     "serviceTypes": ["bleach"],
     "verified": "partial",
-    "sourceIds": ["schwarzkopf-blondme-salon-services-manual"],
-    "sourceTitle": "BLONDME Technical Manual 2021",
-    "sourceType": "professional_supplier_pdf",
-    "retrievedAt": "2026-06-17",
+    "sourceIds": [
+      "schwarzkopf-blondme-official-clay-lightener",
+      "schwarzkopf-blondme-official-service-manual",
+      "schwarzkopf-blondme-official-technical-booklet"
+    ],
+    "sourceTitle": "BLONDME Clay Lightener Official Product Page and Service Manual",
+    "sourceType": "official_web_and_pdf_partial_rule",
+    "retrievedAt": "2026-06-18",
     "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
-    "notes": "Partial seed for Clay Lightener; used as structure only in version one.",
+    "notes": "Official-source seed for BLONDME Clay Lightener. Kept partial because official mixing ratio is flexible 1:1.5-1:2 and current engine cannot yet model technique-specific consistency.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -81,7 +89,7 @@
           "processingTimeMin": 20,
           "processingTimeMax": 45,
           "conditions": ["Freehand or clay lightener work with compatible BLONDME developer."],
-          "warnings": ["Do not exceed product-specific processing time; monitor visually."]
+          "warnings": ["Designed for freehand/off-scalp work. Additional heat is not recommended; monitor visually."]
         }
       ],
       "developerRules": [
@@ -107,8 +115,8 @@
           "restrictions": ["High risk on damaged hair or near scalp."]
         }
       ],
-      "restrictions": ["Partial source; exact grams are blocked until current official data is verified."],
-      "warnings": ["Use official BLONDME product leaflet before salon service."]
+      "restrictions": ["Partial rule: official source uses a ratio range, so exact grams are blocked until the engine supports ratio selection."],
+      "warnings": ["Use official BLONDME product leaflet and professional judgement before salon service."]
     }
   }
 ]

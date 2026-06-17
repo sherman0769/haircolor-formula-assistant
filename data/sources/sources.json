@@ -30,6 +30,16 @@
     "notes": "Older official Wella booklet. Lightener products vary by region and product generation, so use as partial reference only."
   },
   {
+    "id": "wella-blondor-fact-sheet",
+    "title": "Blondor Fact Sheet",
+    "publisher": "Wella Professionals",
+    "sourceType": "official_pdf",
+    "url": "https://www.wella.com/professional/m/_master/PDF/Products/BlondorFactSheet.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Wella Professionals Blondor product fact sheet with product-specific developer ranges, mixing ratios and maximum development times."
+  },
+  {
     "id": "loreal-majirel-us-2025",
     "title": "Majirel Color Chart 2025",
     "publisher": "L'Oreal Professionnel US",
@@ -70,6 +80,36 @@
     "notes": "Professional supplier-hosted manual. Use as partial until checked against the current official regional Schwarzkopf manual."
   },
   {
+    "id": "schwarzkopf-igora-official-page",
+    "title": "IGORA ROYAL Official Product Page",
+    "publisher": "Schwarzkopf Professional",
+    "sourceType": "official_web",
+    "url": "https://www.schwarzkopf-professional.com/us/en/color/igora/royal.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official Schwarzkopf Professional product page confirms current portfolio and coverage claims, but does not expose complete core formulation rules."
+  },
+  {
+    "id": "schwarzkopf-igora-absolutes-official-page",
+    "title": "IGORA ROYAL ABSOLUTES Official Product Page",
+    "publisher": "Schwarzkopf Professional",
+    "sourceType": "official_web",
+    "url": "https://www.schwarzkopf-professional.com/us/en/color/igora/absolutes.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Schwarzkopf Professional page with Absolutes mixing ratio, developer guidance, development time and white hair coverage notes."
+  },
+  {
+    "id": "schwarzkopf-igora-absolutes-technical-manual",
+    "title": "IGORA ROYAL ABSOLUTES Technical Manual",
+    "publisher": "Schwarzkopf Professional / Henkel DAM",
+    "sourceType": "official_pdf",
+    "url": "https://dm.henkel-dam.com/is/content/henkel/IGORA_ROYAL_ABSOLUTES_Technical_Manual",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Henkel DAM-hosted technical manual linked from the Schwarzkopf Professional Absolutes page."
+  },
+  {
     "id": "skp-blondme-service-manual",
     "title": "BLONDME Service Manual",
     "publisher": "Schwarzkopf Professional / SKP media",
@@ -78,6 +118,46 @@
     "retrievedAt": "2026-06-17",
     "verification": "partial",
     "notes": "Brand media-hosted BLONDME service manual. Product variants and region-specific developer limits require professional confirmation."
+  },
+  {
+    "id": "schwarzkopf-blondme-official-premium-lightener-9",
+    "title": "BLONDME Premium Lightener 9+ Official Product Page",
+    "publisher": "Schwarzkopf Professional",
+    "sourceType": "official_web",
+    "url": "https://www.schwarzkopf-professional.com/gb/en/colour/blondme-colour/lightening/premium-lightener-9.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Schwarzkopf Professional page linking current BLONDME service manual and technical booklet."
+  },
+  {
+    "id": "schwarzkopf-blondme-official-clay-lightener",
+    "title": "BLONDME Clay Lightener Official Product Page",
+    "publisher": "Schwarzkopf Professional",
+    "sourceType": "official_web",
+    "url": "https://www.schwarzkopf-professional.com/gb/en/colour/blondme-colour/lightening/clay-lightener.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Schwarzkopf Professional page confirming BLONDME Clay Lightener use case, lift claim and product positioning."
+  },
+  {
+    "id": "schwarzkopf-blondme-official-service-manual",
+    "title": "BLONDME Service Manual",
+    "publisher": "Schwarzkopf Professional / Henkel DAM",
+    "sourceType": "official_pdf",
+    "url": "https://dm.henkel-dam.com/is/content/henkel/UK_BM_0126_ServiceManual_053013_X.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Henkel DAM-hosted BLONDME service manual linked from current Schwarzkopf Professional BLONDME product pages."
+  },
+  {
+    "id": "schwarzkopf-blondme-official-technical-booklet",
+    "title": "BLONDME Technical Booklet",
+    "publisher": "Schwarzkopf Professional / Henkel DAM",
+    "sourceType": "official_pdf",
+    "url": "https://dm.henkel-dam.com/is/content/henkel/UK_BM_0126_TechnicalBooklet_053013_X.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "verified",
+    "notes": "Official Henkel DAM-hosted BLONDME technical booklet linked from current Schwarzkopf Professional BLONDME product pages."
   },
   {
     "id": "schwarzkopf-blondme-salon-services-manual",
