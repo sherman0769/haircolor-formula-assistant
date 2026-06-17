@@ -8,7 +8,9 @@ type ResultActionsProps = {
   result: FormulaOutput;
 };
 
-function buildReport(result: FormulaOutput) {
+const UTF8_BOM = "\uFEFF";
+
+export function buildReport(result: FormulaOutput) {
   const generatedAt = new Date().toLocaleDateString("zh-TW", {
     day: "2-digit",
     month: "2-digit",
@@ -48,12 +50,18 @@ function buildReport(result: FormulaOutput) {
   return lines.join("\n");
 }
 
+export function buildDownloadReport(result: FormulaOutput) {
+  return `${UTF8_BOM}${buildReport(result).replace(/\n/g, "\r\n")}`;
+}
+
 export function ResultActions({ result }: ResultActionsProps) {
   const [status, setStatus] = useState("");
   const report = buildReport(result);
 
   function downloadReport() {
-    const blob = new Blob([report], { type: "text/plain;charset=utf-8" });
+    const blob = new Blob([buildDownloadReport(result)], {
+      type: "text/plain;charset=utf-8",
+    });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
 
