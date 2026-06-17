@@ -219,8 +219,8 @@ export function FormulaForm() {
   return (
     <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_430px]">
       <form onSubmit={handleSubmit} className="min-w-0 space-y-4">
-        <section className="rounded-lg border border-border bg-panel p-3 shadow-sm sm:p-4">
-          <div className="grid grid-cols-4 gap-2">
+        <section className="sticky top-16 z-30 -mx-4 border-y border-border bg-panel/95 px-3 py-1.5 shadow-[0_8px_24px_rgba(31,35,40,0.10)] backdrop-blur sm:mx-0 sm:rounded-lg sm:border sm:p-3">
+          <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
             {formSteps.map((step, index) => {
               const Icon = step.icon;
               const selected = index === activeStep;
@@ -231,20 +231,24 @@ export function FormulaForm() {
                   key={step.title}
                   type="button"
                   onClick={() => setActiveStep(index)}
-                  className={`rounded-md border px-2 py-2 text-left transition ${
+                  className={`min-h-12 min-w-0 rounded-md border px-2 py-1.5 text-left transition sm:min-h-16 sm:py-2 ${
                     selected
                       ? "border-accent bg-teal-50 text-teal-950"
                       : "border-border bg-panel text-muted-foreground hover:border-accent"
                   }`}
                 >
-                  <span className="flex items-center gap-1.5 text-xs font-semibold">
+                  <span className="flex min-w-0 items-center gap-1 text-xs font-semibold">
                     <Icon aria-hidden="true" className="size-3.5" />
-                    {completed ? "完成" : `0${index + 1}`}
+                    <span className="truncate">
+                      {completed ? "完成" : `0${index + 1}`}
+                    </span>
                   </span>
-                  <span className="mt-1 block text-sm font-semibold text-foreground">
+                  <span className="mt-1 block truncate text-sm font-semibold text-foreground sm:text-base">
                     {step.title}
                   </span>
-                  <span className="hidden text-xs md:block">{step.subtitle}</span>
+                  <span className="hidden truncate text-xs text-muted-foreground lg:block">
+                    {step.subtitle}
+                  </span>
                 </button>
               );
             })}
