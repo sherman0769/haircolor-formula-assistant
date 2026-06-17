@@ -1,3 +1,5 @@
+import { ChevronDown, ShieldCheck } from "lucide-react";
+
 type SafetyNoticeProps = {
   compact?: boolean;
 };
@@ -12,6 +14,48 @@ const safetyStatements = [
 ];
 
 export function SafetyNotice({ compact = false }: SafetyNoticeProps) {
+  if (compact) {
+    return (
+      <section className="rounded-lg border border-border bg-panel p-3 shadow-sm">
+        <details className="group [&_summary::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+            <span className="flex min-w-0 items-center gap-2">
+              <span className="grid size-9 shrink-0 place-items-center rounded-md bg-teal-50 text-accent">
+                <ShieldCheck aria-hidden="true" className="size-4" />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-foreground">
+                  專業確認
+                </span>
+                <span className="block truncate text-xs leading-5 text-muted-foreground">
+                  配方僅供設計師輔助參考，最終需現場確認。
+                </span>
+              </span>
+            </span>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-md border border-border bg-muted px-2 py-1 text-xs font-semibold text-muted-foreground">
+              詳情
+              <ChevronDown
+                aria-hidden="true"
+                className="size-3.5 transition group-open:rotate-180"
+              />
+            </span>
+          </summary>
+
+          <div className="mt-3 border-t border-border pt-3">
+            <p className="text-sm leading-6 text-foreground">
+              本工具僅為美髮設計師配方輔助工具，不保證染髮結果。
+            </p>
+            <ul className="mt-2 space-y-2 text-xs leading-5 text-muted-foreground">
+              {safetyStatements.slice(1).map((statement) => (
+                <li key={statement}>{statement}</li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      </section>
+    );
+  }
+
   return (
     <section className="rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-950">
       <h2 className="text-base font-semibold">專業確認必須保留</h2>
