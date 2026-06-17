@@ -1,0 +1,114 @@
+[
+  {
+    "brandId": "schwarzkopf",
+    "brandName": "Schwarzkopf Professional",
+    "productLineId": "blondme-premium-lightener",
+    "productLineName": "BLONDME Premium Lightener",
+    "region": "Brand media seed / verify local region",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": ["skp-blondme-service-manual"],
+    "sourceTitle": "BLONDME Service Manual",
+    "sourceType": "brand_media_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Partial seed for BLONDME Premium Lightener. Exact product generation and developer system must be checked.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "schwarzkopf-blondme-premium-reference",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1.5-1:2.5 reference",
+          "allowedDevelopers": [2, 6, 9],
+          "processingTimeMin": 20,
+          "processingTimeMax": 45,
+          "conditions": ["BLONDME lightening service with compatible Premium Developer."],
+          "warnings": ["Check development visually; heat is not recommended in common BLONDME guidance."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 2,
+          "volume": 7,
+          "liftRange": [1, 3],
+          "recommendedUse": ["gentle controlled lift"],
+          "restrictions": ["Confirm compatibility with exact BLONDME product."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [3, 5],
+          "recommendedUse": ["controlled lightening"],
+          "restrictions": ["Assess scalp proximity and damage."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [4, 7],
+          "recommendedUse": ["off-scalp higher lift when allowed"],
+          "restrictions": ["Avoid compromised hair."]
+        }
+      ],
+      "restrictions": ["Partial source; exact grams are blocked until current official data is verified."],
+      "warnings": ["Do not force precise formulas for BLONDME until product-specific data is confirmed."]
+    }
+  },
+  {
+    "brandId": "schwarzkopf",
+    "brandName": "Schwarzkopf Professional",
+    "productLineId": "blondme-clay-lightener",
+    "productLineName": "BLONDME Clay Lightener",
+    "region": "Professional supplier seed / verify local region",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": ["schwarzkopf-blondme-salon-services-manual"],
+    "sourceTitle": "BLONDME Technical Manual 2021",
+    "sourceType": "professional_supplier_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Partial seed for Clay Lightener; used as structure only in version one.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "schwarzkopf-blondme-clay-reference",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1.5-1:2",
+          "allowedDevelopers": [6, 9, 12],
+          "processingTimeMin": 20,
+          "processingTimeMax": 45,
+          "conditions": ["Freehand or clay lightener work with compatible BLONDME developer."],
+          "warnings": ["Do not exceed product-specific processing time; monitor visually."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [2, 4],
+          "recommendedUse": ["freehand controlled lift"],
+          "restrictions": ["Confirm product instructions for scalp proximity."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [3, 6],
+          "recommendedUse": ["off-scalp lightening"],
+          "restrictions": ["Avoid compromised hair."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [4, 7],
+          "recommendedUse": ["maximum off-scalp lift when permitted"],
+          "restrictions": ["High risk on damaged hair or near scalp."]
+        }
+      ],
+      "restrictions": ["Partial source; exact grams are blocked until current official data is verified."],
+      "warnings": ["Use official BLONDME product leaflet before salon service."]
+    }
+  }
+]

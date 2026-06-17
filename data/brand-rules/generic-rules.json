@@ -1,0 +1,184 @@
+[
+  {
+    "brandId": "generic",
+    "brandName": "Generic",
+    "productLineId": "generic-permanent-rules",
+    "productLineName": "通用教育用規則",
+    "region": "Non-brand educational reference",
+    "serviceTypes": [
+      "permanent",
+      "retouch",
+      "grey-coverage",
+      "color-correction",
+      "bleach",
+      "high-lift",
+      "post-fade-toning",
+      "cool-tone-adjustment"
+    ],
+    "verified": "unverified",
+    "sourceIds": ["generic-education-policy"],
+    "sourceTitle": "Generic Education Rules Policy",
+    "sourceType": "internal_policy",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "通用規則不可標示為品牌官方；只能作為教育方向，不能替代品牌技術手冊。",
+    "notes": "Generic educational rule set. The engine blocks exact brand formula grams for this product line.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "generic-permanent-1-1",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1 reference",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 25,
+          "processingTimeMax": 40,
+          "conditions": ["Generic permanent color education reference."],
+          "warnings": ["Not brand official. Use only as directional education."]
+        },
+        {
+          "id": "generic-grey-coverage-1-1",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1 reference",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["Generic grey coverage education reference."],
+          "warnings": ["Not brand official. Natural base support must be adjusted by stylist."]
+        },
+        {
+          "id": "generic-bleach-1-2",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1.5-1:2 reference",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 5,
+          "processingTimeMax": 50,
+          "conditions": ["Generic lightener education reference."],
+          "warnings": ["Not brand official. Never force precise lightener formula without product instructions."]
+        },
+        {
+          "id": "generic-high-lift-1-2",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "1:2 reference",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 45,
+          "processingTimeMax": 60,
+          "conditions": ["Generic high-lift education reference."],
+          "warnings": ["Not brand official. High lift only suits specific natural bases."]
+        },
+        {
+          "id": "generic-toning-1-2",
+          "serviceType": "post-fade-toning",
+          "ratio": 2,
+          "ratioLabel": "1:2 reference",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": ["Generic toning education reference."],
+          "warnings": ["Not brand official. Porous hair can over-deposit quickly."]
+        },
+        {
+          "id": "generic-cool-adjustment-1-2",
+          "serviceType": "cool-tone-adjustment",
+          "ratio": 2,
+          "ratioLabel": "1:2 reference",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 5,
+          "processingTimeMax": 20,
+          "conditions": ["Generic cool tone adjustment reference."],
+          "warnings": ["Not brand official. Corrector grams are not calculated."]
+        },
+        {
+          "id": "generic-correction-reference",
+          "serviceType": "color-correction",
+          "ratio": 1,
+          "ratioLabel": "brand-dependent",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 5,
+          "processingTimeMax": 35,
+          "conditions": ["Generic corrective work reference after strand test."],
+          "warnings": ["Corrective color must be designed by a professional after manual base confirmation."]
+        },
+        {
+          "id": "generic-retouch-1-1",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1 reference",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 25,
+          "processingTimeMax": 40,
+          "conditions": ["Generic retouch education reference."],
+          "warnings": ["Avoid overlapping previously colored lengths."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 1.9,
+          "volume": 6,
+          "liftRange": [0, 0],
+          "recommendedUse": ["soft toning reference"],
+          "restrictions": ["Brand compatibility required."]
+        },
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit reference"],
+          "restrictions": ["Brand compatibility required."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["grey coverage or moderate lift reference"],
+          "restrictions": ["Brand compatibility required."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["higher lift reference"],
+          "restrictions": ["Brand compatibility required; avoid high damage."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["high lift reference"],
+          "restrictions": ["High risk; brand compatibility required."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 25,
+          "fashionShadePercent": 75,
+          "note": "Educational reference only."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 35,
+          "fashionShadePercent": 65,
+          "note": "Educational reference only."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "Educational reference only."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 60,
+          "fashionShadePercent": 40,
+          "note": "Educational reference only."
+        }
+      ],
+      "restrictions": ["Generic data is unverified and cannot output precise brand formulas."],
+      "warnings": ["Final formula must be confirmed by a professional stylist."]
+    }
+  }
+]

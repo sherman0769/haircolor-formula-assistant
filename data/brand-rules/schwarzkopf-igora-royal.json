@@ -1,0 +1,124 @@
+[
+  {
+    "brandId": "schwarzkopf",
+    "brandName": "Schwarzkopf Professional",
+    "productLineId": "igora-royal",
+    "productLineName": "IGORA ROYAL",
+    "region": "Professional supplier seed / verify local region",
+    "serviceTypes": ["permanent", "retouch", "grey-coverage", "high-lift", "color-correction"],
+    "verified": "partial",
+    "sourceIds": ["schwarzkopf-igora-salon-services-manual"],
+    "sourceTitle": "IGORA ROYAL Technical Manual",
+    "sourceType": "professional_supplier_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Supplier-hosted technical manual seed. Marked partial until current official regional manual is reviewed.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "schwarzkopf-igora-permanent-1-1",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6, 9, 12],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["Permanent color within IGORA ROYAL education guidance."],
+          "warnings": ["Partial seed: confirm current official regional manual before exact formulation."]
+        },
+        {
+          "id": "schwarzkopf-igora-grey-coverage-1-1",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["White hair coverage where the shade family supports coverage."],
+          "warnings": ["Coverage claims and natural shade ratios must be checked with current brand education."]
+        },
+        {
+          "id": "schwarzkopf-igora-high-lift-reference",
+          "serviceType": "high-lift",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 30,
+          "processingTimeMax": 45,
+          "conditions": ["High lift series where product instructions allow."],
+          "warnings": ["Do not use as a generic bleach replacement."]
+        },
+        {
+          "id": "schwarzkopf-igora-color-correction-reference",
+          "serviceType": "color-correction",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 30,
+          "conditions": ["Corrective work after professional strand test."],
+          "warnings": ["Booster or additive limits must follow official IGORA ROYAL guidance."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit", "same level"],
+          "restrictions": ["Limited lift."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["coverage", "moderate lift"],
+          "restrictions": ["Assess resistant white hair and product family."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["lift on natural hair"],
+          "restrictions": ["Avoid high damage."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["high-lift series when allowed"],
+          "restrictions": ["High risk near scalp and on compromised hair."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 25,
+          "fashionShadePercent": 75,
+          "note": "Partial generic coverage support pending official confirmation."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 35,
+          "fashionShadePercent": 65,
+          "note": "Partial generic coverage support pending official confirmation."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "Partial generic coverage support pending official confirmation."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 60,
+          "fashionShadePercent": 40,
+          "note": "Partial generic coverage support pending official confirmation."
+        }
+      ],
+      "restrictions": ["Partial source; exact grams are blocked until verified data is entered."],
+      "warnings": ["Use current Schwarzkopf Professional technical manual for final formula."]
+    }
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "brandId": "milbon",
+    "brandName": "Milbon",
+    "productLineId": "sophistone-permanent",
+    "productLineName": "Sophistone Permanent Color",
+    "region": "US seed",
+    "serviceTypes": ["permanent", "retouch", "grey-coverage", "color-correction", "cool-tone-adjustment"],
+    "verified": "verified",
+    "sourceIds": ["milbon-sophistone-landing", "milbon-sophistone-chart"],
+    "sourceTitle": "SOPHISTONE Permanent Color",
+    "sourceType": "official_web",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Milbon Sophistone Permanent Color seed rules for first version.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "milbon-sophistone-permanent-1-1",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6, 9, 12],
+          "processingTimeMin": 35,
+          "processingTimeMax": 35,
+          "conditions": ["Permanent color using Sophistone Cream Developer."],
+          "warnings": ["Resistant grey may require longer timing according to official guidance."]
+        },
+        {
+          "id": "milbon-sophistone-retouch-1-1",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 35,
+          "processingTimeMax": 35,
+          "conditions": ["Root retouch with Sophistone Permanent Color."],
+          "warnings": ["Avoid over-depositing porous previously colored ends."]
+        },
+        {
+          "id": "milbon-sophistone-grey-coverage-1-1",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 35,
+          "processingTimeMax": 40,
+          "conditions": ["Grey coverage or resistant grey where official guidance allows extended processing."],
+          "warnings": ["Natural base and shade selection must be confirmed by stylist."]
+        },
+        {
+          "id": "milbon-sophistone-cool-adjustment-1-1",
+          "serviceType": "cool-tone-adjustment",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 35,
+          "conditions": ["Cool or tonal adjustment on suitable hair."],
+          "warnings": ["Intensifier ribbon guidance is shade-level specific; do not convert to grams without brand rule."]
+        },
+        {
+          "id": "milbon-sophistone-correction-1-1",
+          "serviceType": "color-correction",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 35,
+          "conditions": ["Corrective color after strand test."],
+          "warnings": ["Color correction requires manual undertone confirmation."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit", "same level", "tone adjustment"],
+          "restrictions": ["Limited lift."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["grey coverage", "moderate lift"],
+          "restrictions": ["Assess damaged or porous hair."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["lift on natural hair"],
+          "restrictions": ["Avoid high damage."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["maximum lift when allowed"],
+          "restrictions": ["High risk near scalp and on compromised hair."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 25,
+          "fashionShadePercent": 75,
+          "note": "Generic base support seed; verify with Milbon education."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 35,
+          "fashionShadePercent": 65,
+          "note": "Generic base support seed; verify with Milbon education."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "Generic base support seed; verify with Milbon education."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 60,
+          "fashionShadePercent": 40,
+          "note": "Generic base support seed; verify with Milbon education."
+        }
+      ],
+      "restrictions": ["Follow manufacturer's guidelines for product use."],
+      "warnings": ["Intensifier amounts should follow the official color chart and stylist judgement."]
+    }
+  },
+  {
+    "brandId": "milbon",
+    "brandName": "Milbon",
+    "productLineId": "sophistone-high-lift",
+    "productLineName": "Sophistone High Lift",
+    "region": "US seed",
+    "serviceTypes": ["high-lift"],
+    "verified": "verified",
+    "sourceIds": ["milbon-sophistone-landing"],
+    "sourceTitle": "SOPHISTONE Permanent Color",
+    "sourceType": "official_web",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Milbon Sophistone High Lift seed rules.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "milbon-sophistone-high-lift-1-2",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "1:2",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 50,
+          "processingTimeMax": 50,
+          "conditions": ["High Lift Series using Sophistone Cream Developer."],
+          "warnings": ["High lift is for appropriate natural bases; not a substitute for bleach over dark artificial color."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["high lift"],
+          "restrictions": ["Assess scalp proximity and prior color."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["maximum high lift when allowed"],
+          "restrictions": ["High risk near scalp or on damaged hair."]
+        }
+      ],
+      "restrictions": ["Follow manufacturer's guidelines for product use."],
+      "warnings": ["Do not use high-lift color to promise results on black dye or heavy artificial pigment."]
+    }
+  }
+]

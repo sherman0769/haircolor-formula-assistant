@@ -1,0 +1,97 @@
+import { describe, expect, it } from "vitest";
+import { DEFAULT_FORMULA_INPUT } from "@/lib/constants";
+import { calculateFormula } from "@/lib/formula-engine";
+import type { FormulaInput } from "@/lib/types";
+
+function buildInput(overrides: Partial<FormulaInput> = {}): FormulaInput {
+  return {
+    ...DEFAULT_FORMULA_INPUT,
+    brandId: "loreal",
+    productLineId: "majirel",
+    manualBaseConfirmed: true,
+    observedUndertone: "none",
+    desiredTotalColorGrams: 60,
+    ...overrides,
+  };
+}
+
+describe("calculateFormula", () => {
+  it("calculates developer grams from verified brand ratio", () => {
+    const output = calculateFormula(buildInput());
+
+    expect(output.mixingRatio).toBe("1:1.5");
+    expect(output.totalColorGrams).toBe(60);
+    expect(output.totalDeveloperGrams).toBe(90);
+    expect(output.confidenceLevel).toBe("high");
+  });
+
+  it("adds natural base support for grey coverage", () => {
+    const output = calculateFormula(
+      buildInput({
+        serviceType: "grey-coverage",
+        greyPercentage: "51-75",
+        needsGreyCoverage: true,
+      }),
+    );
+    const base = output.formulaItems.find((item) => item.role === "base");
+
+    expect(base?.grams).toBe(30);
+    expect(output.developer.developerPercent).toBe(6);
+  });
+
+  it("does not output precise grams for unverified generic rules", () => {
+    const output = calculateFormula(
+      buildInput({
+        brandId: "generic",
+        productLineId: "generic-permanent-rules",
+      }),
+    );
+
+    expect(output.totalColorGrams).toBeNull();
+    expect(output.totalDeveloperGrams).toBeNull();
+    expect(output.formulaItems[0].role).toBe("reference");
+    expect(output.confidenceLevel).toBe("low");
+  });
+
+  it("does not output precise grams for partial brand rules", () => {
+    const output = calculateFormula(
+      buildInput({
+        brandId: "schwarzkopf",
+        productLineId: "igora-royal",
+      }),
+    );
+
+    expect(output.totalColorGrams).toBeNull();
+    expect(output.totalDeveloperGrams).toBeNull();
+    expect(output.formulaItems[0].role).toBe("reference");
+    expect(output.confidenceLevel).toBe("low");
+  });
+
+  it("blocks precise grams for high-risk black dye lift", () => {
+    const output = calculateFormula(
+      buildInput({
+        currentLevel: 3,
+        targetLevel: 7,
+        hasBoxDyeOrBlackDye: "yes",
+      }),
+    );
+
+    expect(output.totalColorGrams).toBeNull();
+    expect(output.totalDeveloperGrams).toBeNull();
+    expect(output.riskWarnings.join(" ")).toContain("黑染");
+  });
+
+  it("keeps neutralization grams directional", () => {
+    const output = calculateFormula(
+      buildInput({
+        needsToning: true,
+        targetTone: "grey",
+        observedUndertone: "orange",
+      }),
+    );
+    const additive = output.formulaItems.find((item) => item.role === "additive");
+
+    expect(additive?.grams).toBeNull();
+    expect(additive?.note).toContain("藍");
+  });
+});

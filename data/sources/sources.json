@@ -1,0 +1,122 @@
+[
+  {
+    "id": "wella-koleston-fact-sheet",
+    "title": "Koleston Perfect Fact Sheet",
+    "publisher": "Wella Professionals",
+    "sourceType": "official_pdf",
+    "url": "https://www.wella.com/professional/m/_master/PDF/Products/Koleston_Perfect_Fact_Sheet.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "verified",
+    "notes": "Official Wella Professionals product fact sheet. Use regional technical manuals where available."
+  },
+  {
+    "id": "wella-koleston-leaflet",
+    "title": "Koleston Perfect Usage Guidelines",
+    "publisher": "Wella Professionals",
+    "sourceType": "official_pdf",
+    "url": "https://www.wella.com/professional/m/Shadechart_LP/Wella-Professionals_Koleston-Perfect_Leaflet.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "verified",
+    "notes": "Official Wella Professionals leaflet with selected mixing guidance and product usage notes."
+  },
+  {
+    "id": "wella-blondor-usage-booklet",
+    "title": "Blondor Usage Booklet",
+    "publisher": "Wella Professionals",
+    "sourceType": "official_pdf",
+    "url": "https://www.wella.com/professional/m/_master/products/blondor/PDFs/Blondor_UsageBooklet.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Older official Wella booklet. Lightener products vary by region and product generation, so use as partial reference only."
+  },
+  {
+    "id": "loreal-majirel-us-2025",
+    "title": "Majirel Color Chart 2025",
+    "publisher": "L'Oreal Professionnel US",
+    "sourceType": "official_pdf",
+    "url": "https://us.lorealprofessionnel.com/pro-resources/-/media/project/loreal/brand-sites/lp/americas/us/shade-charts/majirel-colorchart-2025-r5-spreads-%281%29.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "verified",
+    "notes": "Official L'Oreal Professionnel US shade chart with mixing ratio, processing time and developer lift guidance."
+  },
+  {
+    "id": "loreal-majirel-technical-guide",
+    "title": "Majirel Technical Guide",
+    "publisher": "Salon Services / L'Oreal Professionnel",
+    "sourceType": "professional_supplier_pdf",
+    "url": "https://www.salon-services.com/on/demandware.static/-/Sites-salon-services-Library/default/dw62795eee/1-PDF/brands/loreal/Majirel-Technical-Guide.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Professional supplier-hosted technical guide. Treat grey coverage details as partial unless confirmed against current regional official material."
+  },
+  {
+    "id": "loreal-blond-studio-tech-sheet",
+    "title": "Blond Studio Technical Sheet",
+    "publisher": "L'Oreal Professionnel",
+    "sourceType": "official_pdf",
+    "url": "https://brandassets.lorealpublications.com/bbiz-sept2021/Blond%20Studio%20Technical%20Sheet%20EN.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Official technical sheet, but Blond Studio has multiple products and techniques; keep first version as partial."
+  },
+  {
+    "id": "schwarzkopf-igora-salon-services-manual",
+    "title": "IGORA ROYAL Technical Manual",
+    "publisher": "Salon Services / Schwarzkopf Professional",
+    "sourceType": "professional_supplier_pdf",
+    "url": "https://www.salon-services.com/on/demandware.static/-/Sites-salon-services-Library/default/1-PDF/brands/schwarzkopf/schwarzkopf-igora-royal-technical-manual.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Professional supplier-hosted manual. Use as partial until checked against the current official regional Schwarzkopf manual."
+  },
+  {
+    "id": "skp-blondme-service-manual",
+    "title": "BLONDME Service Manual",
+    "publisher": "Schwarzkopf Professional / SKP media",
+    "sourceType": "brand_media_pdf",
+    "url": "https://skp.media/blondme/assets/pdf/1_SERVICE%20MANUAL.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Brand media-hosted BLONDME service manual. Product variants and region-specific developer limits require professional confirmation."
+  },
+  {
+    "id": "schwarzkopf-blondme-salon-services-manual",
+    "title": "BLONDME Technical Manual 2021",
+    "publisher": "Salon Services / Schwarzkopf Professional",
+    "sourceType": "professional_supplier_pdf",
+    "url": "https://www.salon-services.com/on/demandware.static/-/Sites-salon-services-Library/default/dwfaa24bd6/BLONDME%20Technical%20Manual%202021.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "partial",
+    "notes": "Professional supplier-hosted BLONDME manual. Treat clay and premium lightener data as partial seed rules."
+  },
+  {
+    "id": "milbon-sophistone-landing",
+    "title": "SOPHISTONE Permanent Color",
+    "publisher": "Milbon USA",
+    "sourceType": "official_web",
+    "url": "https://www.milbon-usa.com/landing/permanentcolor",
+    "retrievedAt": "2026-06-17",
+    "verification": "verified",
+    "notes": "Official Milbon USA page with permanent and high lift mixing ratio, developer and processing time."
+  },
+  {
+    "id": "milbon-sophistone-chart",
+    "title": "Milbon Sophistone Permanent Color Chart",
+    "publisher": "Milbon USA",
+    "sourceType": "official_pdf",
+    "url": "https://www.milbon-usa.com/media/pdf/milbon/milbon%20sophistone%20permanent%20color%20chart.pdf",
+    "retrievedAt": "2026-06-17",
+    "verification": "verified",
+    "notes": "Official Milbon USA PDF color chart used as supporting source."
+  },
+  {
+    "id": "generic-education-policy",
+    "title": "Generic Education Rules Policy",
+    "publisher": "Project seed data",
+    "sourceType": "internal_policy",
+    "url": "",
+    "retrievedAt": "2026-06-17",
+    "verification": "unverified",
+    "notes": "Generic education rules are not brand official rules and must not be shown as verified."
+  }
+]

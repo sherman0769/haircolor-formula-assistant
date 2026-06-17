@@ -1,0 +1,222 @@
+[
+  {
+    "brandId": "loreal",
+    "brandName": "L'Oreal Professionnel",
+    "productLineId": "majirel",
+    "productLineName": "Majirel",
+    "region": "US seed / verify local region",
+    "serviceTypes": ["permanent", "retouch", "grey-coverage", "color-correction"],
+    "verified": "verified",
+    "sourceIds": ["loreal-majirel-us-2025", "loreal-majirel-technical-guide"],
+    "sourceTitle": "Majirel Color Chart 2025",
+    "sourceType": "official_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Majirel permanent color seed rules. Grey coverage proportions must be confirmed with current regional training material.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "loreal-majirel-permanent-1-1-5",
+          "serviceType": "permanent",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5",
+          "allowedDevelopers": [3.75, 6, 9],
+          "processingTimeMin": 35,
+          "processingTimeMax": 35,
+          "conditions": ["Permanent color, same level, darkening or lift within Majirel guidance."],
+          "warnings": ["Use current Majicreme developer guidance for the region."]
+        },
+        {
+          "id": "loreal-majirel-retouch-1-1-5",
+          "serviceType": "retouch",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5",
+          "allowedDevelopers": [3.75, 6, 9],
+          "processingTimeMin": 35,
+          "processingTimeMax": 35,
+          "conditions": ["Regrowth retouch with Majirel system."],
+          "warnings": ["Avoid overlapping porous lengths unless refreshing is intentional."]
+        },
+        {
+          "id": "loreal-majirel-grey-coverage-1-1-5",
+          "serviceType": "grey-coverage",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 35,
+          "processingTimeMax": 35,
+          "conditions": ["Grey coverage with natural/basic shade support when needed."],
+          "warnings": ["Coverage of resistant white hair requires saturation and current brand instructions."]
+        },
+        {
+          "id": "loreal-majirel-color-correction-reference",
+          "serviceType": "color-correction",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5",
+          "allowedDevelopers": [3.75, 6],
+          "processingTimeMin": 10,
+          "processingTimeMax": 35,
+          "conditions": ["Corrective work after professional strand test."],
+          "warnings": ["Corrector grams are not calculated without explicit brand shade guidance."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3.75,
+          "volume": 12.5,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit", "darkening", "same level"],
+          "restrictions": ["Limited lift."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["white hair coverage", "up to 2 levels lift"],
+          "restrictions": ["Assess damaged or porous hair before use."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["up to 3 levels lift"],
+          "restrictions": ["Avoid on high damage or scalp-sensitive situations."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "Low white hair percentage may use target shade if coverage is adequate."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 0,
+          "fashionShadePercent": 100,
+          "note": "Up to 50% white hair often uses target shade; verify current guide."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "For higher white hair percentage, natural/basic shade support may be needed."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "High white hair percentage: half natural/basic support is a common Majirel guide pattern."
+        }
+      ],
+      "restrictions": ["Do not use metallic tools when product instructions prohibit them."],
+      "warnings": ["Use only as a formulation aid; final shade number and reflect choice require stylist confirmation."]
+    }
+  },
+  {
+    "brandId": "loreal",
+    "brandName": "L'Oreal Professionnel",
+    "productLineId": "majirel-high-lift",
+    "productLineName": "Majirel High-Lift",
+    "region": "US seed / verify local region",
+    "serviceTypes": ["high-lift"],
+    "verified": "verified",
+    "sourceIds": ["loreal-majirel-us-2025"],
+    "sourceTitle": "Majirel Color Chart 2025",
+    "sourceType": "official_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "High-lift seed rules for natural bases where the product line is indicated.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "loreal-majirel-high-lift-1-2",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "1:2",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 50,
+          "processingTimeMax": 50,
+          "conditions": ["High-lift blonding and toning in one step where Majirel High-Lift is appropriate."],
+          "warnings": ["Not a substitute for bleach on darker or color-treated bases."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["less lift, more neutralization"],
+          "restrictions": ["Use only where high-lift color is appropriate."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["maximum high-lift effect when permitted"],
+          "restrictions": ["High risk near scalp and on damaged or previously colored hair."]
+        }
+      ],
+      "restrictions": ["Not recommended over artificial dark color or black dye residue."],
+      "warnings": ["Professional assessment is required before high-lift services."]
+    }
+  },
+  {
+    "brandId": "loreal",
+    "brandName": "L'Oreal Professionnel",
+    "productLineId": "blond-studio",
+    "productLineName": "Blond Studio Structure",
+    "region": "Global seed / verify product variant",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": ["loreal-blond-studio-tech-sheet"],
+    "sourceTitle": "Blond Studio Technical Sheet",
+    "sourceType": "official_pdf_partial",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Blond Studio has several techniques and product forms; first version keeps it partial.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "loreal-blond-studio-bleach-reference",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1-1:3 by technique",
+          "allowedDevelopers": [6, 9, 12],
+          "processingTimeMin": 5,
+          "processingTimeMax": 50,
+          "conditions": ["Technique-dependent lightener mixing by product variant."],
+          "warnings": ["Do not apply heat or exceed official maximum time where prohibited."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [2, 4],
+          "recommendedUse": ["on-scalp maximum in many Blond Studio lightener contexts"],
+          "restrictions": ["Confirm product-specific instructions."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [3, 6],
+          "recommendedUse": ["off-scalp lightening"],
+          "restrictions": ["Avoid compromised hair."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [4, 7],
+          "recommendedUse": ["maximum off-scalp lift when allowed"],
+          "restrictions": ["Not for scalp-adjacent work unless official instructions specifically allow."]
+        }
+      ],
+      "restrictions": ["Partial data only; exact Blond Studio product must be selected."],
+      "warnings": ["This product line only outputs reference direction in version one."]
+    }
+  }
+]

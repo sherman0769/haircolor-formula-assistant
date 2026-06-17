@@ -1,0 +1,230 @@
+[
+  {
+    "brandId": "wella",
+    "brandName": "Wella Professionals",
+    "productLineId": "koleston-perfect",
+    "productLineName": "Koleston Perfect",
+    "region": "Global seed / verify local region",
+    "serviceTypes": [
+      "permanent",
+      "retouch",
+      "grey-coverage",
+      "high-lift",
+      "post-fade-toning",
+      "cool-tone-adjustment"
+    ],
+    "verified": "verified",
+    "sourceIds": ["wella-koleston-fact-sheet", "wella-koleston-leaflet"],
+    "sourceTitle": "Koleston Perfect Fact Sheet and Usage Guidelines",
+    "sourceType": "official_pdf",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Core Koleston Perfect seed rules. Special Mix, Special Blonde and Balance services may require sub-line checks.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "wella-koleston-permanent-1-1",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6, 9, 12],
+          "processingTimeMin": 30,
+          "processingTimeMax": 40,
+          "conditions": ["Permanent color or level adjustment with Welloxon Perfect developer."],
+          "warnings": ["Special shades and regional education rules may require different timing or ratio."]
+        },
+        {
+          "id": "wella-koleston-retouch-1-1",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [3, 6, 9],
+          "processingTimeMin": 30,
+          "processingTimeMax": 40,
+          "conditions": ["Regrowth retouch using the same product system."],
+          "warnings": ["Avoid unnecessary overlap on porous mid-lengths and ends."]
+        },
+        {
+          "id": "wella-koleston-grey-coverage-1-1",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 30,
+          "processingTimeMax": 40,
+          "conditions": ["Grey coverage service where natural base support is needed."],
+          "warnings": ["Resistant grey hair may require brand-specific coverage education and saturation control."]
+        },
+        {
+          "id": "wella-koleston-special-blonde-1-2",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "1:2",
+          "allowedDevelopers": [9, 12],
+          "processingTimeMin": 50,
+          "processingTimeMax": 60,
+          "conditions": ["High lift or Special Blonde-style work where the product line supports 1:2 mixing."],
+          "warnings": ["Do not apply high developer near scalp without checking current official instructions and client scalp condition."]
+        },
+        {
+          "id": "wella-koleston-balance-1-2",
+          "serviceType": "post-fade-toning",
+          "ratio": 2,
+          "ratioLabel": "1:2",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 10,
+          "processingTimeMax": 15,
+          "conditions": ["Lengths and ends refresh or soft tonal balance."],
+          "warnings": ["Porous hair may grab tone quickly; visually monitor deposit."]
+        },
+        {
+          "id": "wella-koleston-cool-adjustment-1-2",
+          "serviceType": "cool-tone-adjustment",
+          "ratio": 2,
+          "ratioLabel": "1:2",
+          "allowedDevelopers": [1.9, 3],
+          "processingTimeMin": 10,
+          "processingTimeMax": 15,
+          "conditions": ["Cool tone refinement on previously lightened or faded hair."],
+          "warnings": ["Do not use generic additive grams; adjust by Wella shade family and stylist judgement."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 1.9,
+          "volume": 6,
+          "liftRange": [0, 0],
+          "recommendedUse": ["soft glossing", "tone refresh"],
+          "restrictions": ["Not intended for meaningful lift."]
+        },
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["deposit", "same level", "tone refresh"],
+          "restrictions": ["Limited lift; not a substitute for lightening services."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["grey coverage", "moderate lift"],
+          "restrictions": ["Assess porous or damaged hair before use."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [2, 3],
+          "recommendedUse": ["lift on natural hair"],
+          "restrictions": ["Avoid on highly damaged hair."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [3, 4],
+          "recommendedUse": ["high lift when brand instructions allow"],
+          "restrictions": ["High risk near scalp or on compromised hair."]
+        }
+      ],
+      "greyCoverageRules": [
+        {
+          "greyPercentage": "1-25",
+          "baseShadePercent": 25,
+          "fashionShadePercent": 75,
+          "note": "Low grey percentage: add natural base support if needed."
+        },
+        {
+          "greyPercentage": "26-50",
+          "baseShadePercent": 35,
+          "fashionShadePercent": 65,
+          "note": "Moderate grey percentage: increase natural base support."
+        },
+        {
+          "greyPercentage": "51-75",
+          "baseShadePercent": 50,
+          "fashionShadePercent": 50,
+          "note": "High grey percentage: balanced natural/fashion support."
+        },
+        {
+          "greyPercentage": "76-100",
+          "baseShadePercent": 60,
+          "fashionShadePercent": 40,
+          "note": "Very high grey percentage: stronger natural base support."
+        }
+      ],
+      "restrictions": ["Patch/sensitivity and service suitability must follow brand instructions and local regulations."],
+      "warnings": ["Final shade family and additives require professional confirmation against current Wella education materials."]
+    }
+  },
+  {
+    "brandId": "wella",
+    "brandName": "Wella Professionals",
+    "productLineId": "blondor-lightener",
+    "productLineName": "Blondor / Lightener Structure",
+    "region": "Global seed / verify current product",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": ["wella-blondor-usage-booklet"],
+    "sourceTitle": "Blondor Usage Booklet",
+    "sourceType": "official_pdf_partial",
+    "retrievedAt": "2026-06-17",
+    "sourceNote": "請以品牌官方技術手冊、產品 leaflet、教育手冊或官方色卡為準。若資料來自經銷商、部落格或非官方影片，verified 必須為 false 或 partial。",
+    "notes": "Structure only for first version. Product generation and exact lightener variant must be confirmed.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "wella-blondor-bleach-reference",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "1:1.5-1:2 reference",
+          "allowedDevelopers": [1.9, 4, 6, 9, 12],
+          "processingTimeMin": 5,
+          "processingTimeMax": 50,
+          "conditions": ["Lightener consistency and technique vary by Blondor product."],
+          "warnings": ["Do not exceed official maximum processing time; check development visually."]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 1.9,
+          "volume": 6,
+          "liftRange": [0, 1],
+          "recommendedUse": ["gentle lightening"],
+          "restrictions": ["Slow lift; use only when product instructions allow."]
+        },
+        {
+          "developerPercent": 4,
+          "volume": 13,
+          "liftRange": [1, 2],
+          "recommendedUse": ["controlled lift"],
+          "restrictions": ["Confirm developer compatibility."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [2, 4],
+          "recommendedUse": ["on-scalp maximum in many lightener contexts"],
+          "restrictions": ["Confirm current product instructions for scalp application."]
+        },
+        {
+          "developerPercent": 9,
+          "volume": 30,
+          "liftRange": [3, 5],
+          "recommendedUse": ["off-scalp lift"],
+          "restrictions": ["Avoid on compromised hair or near scalp unless official instructions allow."]
+        },
+        {
+          "developerPercent": 12,
+          "volume": 40,
+          "liftRange": [4, 7],
+          "recommendedUse": ["off-scalp maximum lift when permitted"],
+          "restrictions": ["High risk; not for compromised hair or scalp-adjacent work."]
+        }
+      ],
+      "restrictions": ["Partial data only; exact Blondor product variant must be selected before service."],
+      "warnings": ["The app will only show reference direction for this partial lightener seed."]
+    }
+  }
+]
