@@ -73,6 +73,9 @@ export default function RootLayout({
           </div>
         </header>
         <main className="pb-24 md:pb-0">{children}</main>
+        <footer className="border-t border-border bg-panel/80 px-4 py-5 pb-28 text-center text-xs font-medium text-muted-foreground md:pb-5">
+          26肯邦AI進階課程｜李詩民
+        </footer>
         <MobileNav />
       </body>
     </html>
