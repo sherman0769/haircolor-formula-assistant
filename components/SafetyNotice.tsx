@@ -16,9 +16,9 @@ const safetyStatements = [
 export function SafetyNotice({ compact = false }: SafetyNoticeProps) {
   if (compact) {
     return (
-      <section className="rounded-lg border border-border bg-panel p-3 shadow-sm">
-        <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+      <section className="min-w-0 rounded-lg border border-border bg-panel p-3 shadow-sm">
+        <details className="group min-w-0 [&_summary::-webkit-details-marker]:hidden">
+          <summary className="flex min-w-0 cursor-pointer list-none items-center justify-between gap-3">
             <span className="flex min-w-0 items-center gap-2">
               <span className="grid size-9 shrink-0 place-items-center rounded-md bg-teal-50 text-accent">
                 <ShieldCheck aria-hidden="true" className="size-4" />

@@ -217,8 +217,8 @@ export function FormulaForm() {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_430px]">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_430px]">
+      <form onSubmit={handleSubmit} className="min-w-0 space-y-4">
         <section className="rounded-lg border border-border bg-panel p-3 shadow-sm sm:p-4">
           <div className="grid grid-cols-4 gap-2">
             {formSteps.map((step, index) => {
@@ -607,7 +607,7 @@ export function FormulaForm() {
         </div>
       </form>
 
-      <div ref={resultPanelRef}>
+      <div ref={resultPanelRef} className="min-w-0">
         <FormulaResult result={result} />
       </div>
     </div>

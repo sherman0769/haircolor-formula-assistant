@@ -36,15 +36,22 @@
 
 html {
   background: var(--background);
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   margin: 0;
   background:
     linear-gradient(180deg, rgba(255, 253, 250, 0.92), rgba(243, 240, 234, 1) 38rem),
     var(--background);
   color: var(--foreground);
+  overflow-x: clip;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -56,6 +63,14 @@ input,
 select,
 textarea {
   font: inherit;
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 ::selection {

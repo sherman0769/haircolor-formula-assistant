@@ -56,8 +56,8 @@ export function ColorLevelMeter({
 
   return (
     <section className="rounded-lg border border-border bg-muted p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-normal text-muted-foreground">
             Level Check
           </p>
@@ -66,7 +66,7 @@ export function ColorLevelMeter({
           </h3>
         </div>
         <span
-          className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${getLiftClass(levelDiff)}`}
+          className={`w-fit max-w-full rounded-md border px-2.5 py-1 text-xs font-semibold ${getLiftClass(levelDiff)}`}
         >
           {levelDiff > 0 ? `+${levelDiff}` : levelDiff}｜{getLiftLabel(levelDiff)}
         </span>

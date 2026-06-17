@@ -3,9 +3,9 @@ import { SafetyNotice } from "@/components/SafetyNotice";
 
 export default function FormulaPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
-      <div className="mb-6 grid gap-4 lg:grid-cols-[1fr_380px]">
-        <div>
+    <div className="mx-auto w-full max-w-6xl overflow-x-clip px-4 py-6 sm:py-8">
+      <div className="mb-6 grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="min-w-0">
           <p className="text-sm font-semibold text-accent">配方計算</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-normal">
             輸入髮況與目標色

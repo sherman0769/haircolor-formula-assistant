@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     title: "HairColor Formula Assistant",
     description: "美髮染髮配方助理，給專業設計師的配方輔助工具。",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 const navItems = [
@@ -72,7 +78,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main className="pb-24 md:pb-0">{children}</main>
+        <main className="min-w-0 overflow-x-clip pb-24 md:pb-0">{children}</main>
         <footer className="border-t border-border bg-panel/80 px-4 py-5 pb-28 text-center text-xs font-medium text-muted-foreground md:pb-5">
           26肯邦AI進階課程｜李詩民
         </footer>
