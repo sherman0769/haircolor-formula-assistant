@@ -23,7 +23,7 @@ export function GreyCoverageInput({
           onChange={(event) =>
             onGreyPercentageChange(event.target.value as GreyPercentage)
           }
-          className="mt-2 h-11 w-full rounded-md border border-border bg-panel px-3 text-sm outline-none focus:border-accent"
+          className="mt-2 h-12 w-full rounded-md border border-border bg-panel px-3 text-base outline-none focus:border-accent sm:text-sm"
         >
           {GREY_PERCENTAGE_OPTIONS.map((option) => (
             <option key={option.value} value={option.value}>
@@ -32,7 +32,7 @@ export function GreyCoverageInput({
           ))}
         </select>
       </label>
-      <label className="flex items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
+      <label className="flex min-h-11 items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
         <input
           type="checkbox"
           checked={needsGreyCoverage}

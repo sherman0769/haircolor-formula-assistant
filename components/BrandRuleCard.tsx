@@ -11,6 +11,12 @@ const verifiedClasses: Record<VerificationStatus, string> = {
   unverified: "border-red-300 bg-red-50 text-red-900",
 };
 
+const verifiedLabels: Record<VerificationStatus, string> = {
+  verified: "已驗證",
+  partial: "部分驗證",
+  unverified: "待驗證",
+};
+
 function uniqueRatioLabels(rule: BrandRule) {
   return Array.from(
     new Set(rule.rules.mixingRules.map((mixingRule) => mixingRule.ratioLabel)),
@@ -45,7 +51,7 @@ export function BrandRuleCard({ rule }: BrandRuleCardProps) {
         <span
           className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${verifiedClasses[rule.verified]}`}
         >
-          {rule.verified}
+          {verifiedLabels[rule.verified]}
         </span>
       </div>
 
@@ -80,6 +86,11 @@ export function BrandRuleCard({ rule }: BrandRuleCardProps) {
       <p className="mt-5 border-t border-border pt-4 text-xs leading-5 text-muted-foreground">
         {rule.sourceTitle} / {rule.sourceType} / retrieved {rule.retrievedAt}
       </p>
+      {rule.verified !== "verified" && (
+        <p className="mt-2 rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-xs leading-5 text-amber-950">
+          此產品線資料尚未完整 verified，不會假裝為官方精確手冊內容。
+        </p>
+      )}
     </article>
   );
 }

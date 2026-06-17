@@ -39,14 +39,14 @@ export function DeveloperSelector({
               value === "" ? undefined : Number(value),
             );
           }}
-          className="mt-2 h-11 w-full rounded-md border border-border bg-panel px-3 text-sm outline-none focus:border-accent"
+          className="mt-2 h-12 w-full rounded-md border border-border bg-panel px-3 text-base outline-none focus:border-accent sm:text-sm"
         />
         <span className="mt-2 block text-xs leading-5 text-muted-foreground">
           留空會依髮長與髮量估算，目前估算 {estimatedGrams}g。
         </span>
       </label>
       <div className="grid gap-3 sm:grid-cols-3">
-        <label className="flex items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
+        <label className="flex min-h-11 items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
           <input
             type="checkbox"
             checked={needsToning}
@@ -55,7 +55,7 @@ export function DeveloperSelector({
           />
           <span>需要補色／中和</span>
         </label>
-        <label className="flex items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
+        <label className="flex min-h-11 items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
           <input
             type="checkbox"
             checked={nearScalp}
@@ -64,7 +64,7 @@ export function DeveloperSelector({
           />
           <span>靠近頭皮操作</span>
         </label>
-        <label className="flex items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
+        <label className="flex min-h-11 items-start gap-3 rounded-md border border-border bg-panel p-3 text-sm">
           <input
             type="checkbox"
             checked={acceptsHighRisk}

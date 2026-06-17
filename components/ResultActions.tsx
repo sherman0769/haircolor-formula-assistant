@@ -9,10 +9,17 @@ type ResultActionsProps = {
 };
 
 function buildReport(result: FormulaOutput) {
+  const generatedAt = new Date().toLocaleDateString("zh-TW", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
   const lines = [
     "HairColor Formula Assistant",
-    "美髮染髮配方助理 - 配方摘要",
+    "美髮染髮配方助理｜專業配方摘要",
+    `建立日期：${generatedAt}`,
     "",
+    "配方狀態：需由專業美髮設計師確認",
     `混合比例：${result.mixingRatio}`,
     `染膏：${result.totalColorGrams === null ? "需人工確認" : `${result.totalColorGrams} g`}`,
     `雙氧：${result.totalDeveloperGrams === null ? "需人工確認" : `${result.totalDeveloperGrams} g`}`,
@@ -88,7 +95,7 @@ export function ResultActions({ result }: ResultActionsProps) {
           className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-foreground px-4 text-sm font-semibold text-background hover:opacity-90"
         >
           <Download aria-hidden="true" className="size-4" />
-          下載本機檔案
+          下載配方摘要
         </button>
         <button
           type="button"
@@ -96,7 +103,7 @@ export function ResultActions({ result }: ResultActionsProps) {
           className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border bg-panel px-4 text-sm font-semibold text-foreground hover:border-accent"
         >
           <Share2 aria-hidden="true" className="size-4" />
-          分享專業摘要
+          分享給設計師
         </button>
       </div>
       <p className="mt-2 text-xs leading-5 text-muted-foreground">
