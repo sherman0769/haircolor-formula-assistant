@@ -10,41 +10,99 @@ type ResultActionsProps = {
 
 const UTF8_BOM = "\uFEFF";
 
+function formatGrams(grams: number | null) {
+  return grams === null ? "需人工確認" : `${grams} g`;
+}
+
+function formatDeveloper(result: FormulaOutput) {
+  if (
+    result.developer.developerPercent === null ||
+    result.developer.volume === null
+  ) {
+    return "需人工確認";
+  }
+
+  return `${result.developer.developerPercent}% / ${result.developer.volume} vol`;
+}
+
+function formatConfidence(confidenceLevel: FormulaOutput["confidenceLevel"]) {
+  const labels = {
+    high: "高",
+    medium: "中",
+    low: "低",
+  };
+
+  return labels[confidenceLevel];
+}
+
 export function buildReport(result: FormulaOutput) {
-  const generatedAt = new Date().toLocaleDateString("zh-TW", {
+  const generatedAt = new Date().toLocaleString("zh-TW", {
     day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
     month: "2-digit",
     year: "numeric",
   });
+  const hasPreciseGrams =
+    result.totalColorGrams !== null &&
+    result.totalDeveloperGrams !== null &&
+    result.formulaItems.every((item) => item.grams !== null);
+  const sourceLines =
+    result.sourceSummary.length > 0
+      ? result.sourceSummary.map(
+          (source) =>
+            `- ${source.title}｜${source.sourceType}｜${source.verification}${
+              source.url ? `｜${source.url}` : ""
+            }`,
+        )
+      : ["- 未附來源摘要，請回到品牌規則頁確認 verified / partial / unverified 狀態。"];
   const lines = [
     "HairColor Formula Assistant",
-    "美髮染髮配方助理｜專業配方摘要",
-    `建立日期：${generatedAt}`,
+    "美髮染髮配方助理｜沙龍專業配方單",
+    "26肯邦AI進階課程｜李詩民",
+    `建立時間：${generatedAt}`,
     "",
-    "配方狀態：需由專業美髮設計師確認",
+    "一、基本資料",
+    "顧客姓名：____________________",
+    "設計師：____________________",
+    "服務日期：____________________",
+    "現場底色確認：□ 已確認　□ 待確認",
+    "髮束測試：□ 已完成　□ 待完成",
+    "",
+    "二、配方狀態",
+    `輸出狀態：${hasPreciseGrams ? "可作為配方方向" : "不輸出精確克數，需人工確認"}`,
+    `信心等級：${formatConfidence(result.confidenceLevel)}`,
     `混合比例：${result.mixingRatio}`,
-    `染膏：${result.totalColorGrams === null ? "需人工確認" : `${result.totalColorGrams} g`}`,
-    `雙氧：${result.totalDeveloperGrams === null ? "需人工確認" : `${result.totalDeveloperGrams} g`}`,
-    `雙氧建議：${
-      result.developer.developerPercent === null
-        ? "需人工確認"
-        : `${result.developer.developerPercent}% / ${result.developer.volume} vol`
-    }`,
-    `信心等級：${result.confidenceLevel}`,
+    `染膏總量：${formatGrams(result.totalColorGrams)}`,
+    `雙氧總量：${formatGrams(result.totalDeveloperGrams)}`,
+    `雙氧濃度：${formatDeveloper(result)}`,
     "",
-    "配方項目：",
+    "三、配方項目",
     ...result.formulaItems.map(
       (item) =>
-        `- ${item.label}: ${item.grams === null ? "需人工確認" : `${item.grams} g`}｜${item.note}`,
+        `- ${item.label}：${formatGrams(item.grams)}｜${item.note}`,
     ),
     "",
-    "施工流程：",
+    "四、雙氧建議",
+    result.developer.reason,
+    ...result.developer.restrictions.map((restriction) => `- ${restriction}`),
+    "",
+    "五、施工流程",
     ...result.processSteps.map((step, index) => `${index + 1}. ${step}`),
     "",
-    "風險提醒：",
+    "六、風險與安全提醒",
     ...result.riskWarnings.map((warning) => `- ${warning}`),
     "",
+    "七、資料來源",
+    ...sourceLines,
+    "",
+    "八、專業確認",
     result.professionalCheckRequired,
+    "本工具不保證染髮結果；實際操作需依品牌官方最新技術手冊、現場髮況與專業判斷。",
+    "皮膚過敏測試與髮束測試應於實際操作前完成。",
+    "",
+    "設計師簽名：____________________",
+    "複核人員：____________________",
   ];
 
   return lines.join("\n");
@@ -103,7 +161,7 @@ export function ResultActions({ result }: ResultActionsProps) {
           className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-foreground px-4 text-sm font-semibold text-background hover:opacity-90"
         >
           <Download aria-hidden="true" className="size-4" />
-          下載配方摘要
+          下載沙龍配方單
         </button>
         <button
           type="button"

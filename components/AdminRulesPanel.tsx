@@ -1,7 +1,14 @@
 "use client";
 
 import { useMemo, useSyncExternalStore } from "react";
-import { CheckCircle2, LockKeyhole, ShieldAlert, TriangleAlert } from "lucide-react";
+import {
+  CheckCircle2,
+  ClipboardList,
+  LockKeyhole,
+  ShieldAlert,
+  TriangleAlert,
+} from "lucide-react";
+import type { RuleAuditRow } from "@/lib/rule-audit";
 import type { VerificationStatus } from "@/lib/types";
 import {
   AdminAccessButton,
@@ -9,19 +16,8 @@ import {
   ADMIN_STORAGE_KEY,
 } from "@/components/AdminAccessButton";
 
-export type AdminRuleRow = {
-  id: string;
-  brandName: string;
-  productLineName: string;
-  verified: VerificationStatus;
-  sourceTitle: string;
-  sourceType: string;
-  retrievedAt: string;
-  blockers: string[];
-};
-
 type AdminRulesPanelProps = {
-  rows: AdminRuleRow[];
+  rows: RuleAuditRow[];
 };
 
 const statusLabels: Record<VerificationStatus, string> = {
@@ -66,6 +62,7 @@ export function AdminRulesPanel({ rows }: AdminRulesPanelProps) {
       verified: rows.filter((row) => row.verified === "verified").length,
       partial: rows.filter((row) => row.verified === "partial").length,
       unverified: rows.filter((row) => row.verified === "unverified").length,
+      missing: rows.filter((row) => row.missingItems.length > 0).length,
     }),
     [rows],
   );
@@ -105,10 +102,11 @@ export function AdminRulesPanel({ rows }: AdminRulesPanelProps) {
               目前僅提供只讀檢視與升級判斷方向。正式版本應在後台加入登入、角色權限、資料審核與版本紀錄。
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-2 text-center text-sm">
+          <div className="grid grid-cols-2 gap-2 text-center text-sm sm:grid-cols-4">
             <StatusMetric label="已驗證" value={counts.verified} />
             <StatusMetric label="部分" value={counts.partial} />
             <StatusMetric label="待驗證" value={counts.unverified} />
+            <StatusMetric label="待補資料" value={counts.missing} />
           </div>
         </div>
       </section>
@@ -155,7 +153,45 @@ export function AdminRulesPanel({ rows }: AdminRulesPanelProps) {
                 <dt className="font-medium text-foreground">擷取日期</dt>
                 <dd className="mt-1 text-muted-foreground">{row.retrievedAt}</dd>
               </div>
+              <div>
+                <dt className="font-medium text-foreground">來源筆數</dt>
+                <dd className="mt-1 text-muted-foreground">{row.sourceCount}</dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">服務類型</dt>
+                <dd className="mt-1 text-muted-foreground">{row.serviceCount}</dd>
+              </div>
+              <div>
+                <dt className="font-medium text-foreground">下一步</dt>
+                <dd className="mt-1 text-muted-foreground">{row.nextAction}</dd>
+              </div>
             </dl>
+
+            <div className="mt-4 rounded-md border border-border bg-muted/50 p-3">
+              <p className="flex items-center gap-2 text-sm font-semibold">
+                <ClipboardList
+                  aria-hidden="true"
+                  className="size-4 text-accent"
+                />
+                待補資料
+              </p>
+              {row.missingItems.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {row.missingItems.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-md border border-amber-300 bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-950"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  尚未偵測到結構性缺項，仍需定期複核官方資料。
+                </p>
+              )}
+            </div>
 
             <div className="mt-4 rounded-md border border-border bg-muted/50 p-3">
               <p className="flex items-center gap-2 text-sm font-semibold">
