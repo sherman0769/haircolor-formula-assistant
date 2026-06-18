@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function FeedbackPage() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8 sm:py-10">
+    <div className="mx-auto min-w-0 max-w-5xl overflow-x-clip px-4 py-8 sm:py-10">
       <div className="space-y-3">
         <p className="text-sm font-semibold text-accent">Beta 回饋入口</p>
         <h1 className="text-3xl font-semibold tracking-normal">
@@ -21,10 +21,10 @@ export default function FeedbackPage() {
         </p>
       </div>
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-[1fr_340px]">
+      <div className="mt-8 grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
         <FeedbackTemplateCard />
-        <aside className="space-y-4">
-          <section className="rounded-lg border border-border bg-panel p-5 shadow-sm">
+        <aside className="min-w-0 space-y-4">
+          <section className="min-w-0 rounded-lg border border-border bg-panel p-5 shadow-sm">
             <div className="flex items-center gap-2">
               <ShieldCheck aria-hidden="true" className="size-5 text-accent" />
               <h2 className="text-lg font-semibold">回饋前提醒</h2>
