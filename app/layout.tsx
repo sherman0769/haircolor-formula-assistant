@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { BetaBanner } from "@/components/BetaBanner";
 import { BrandLogo } from "@/components/BrandLogo";
 import { MobileNav } from "@/components/MobileNav";
+import { APP_RELEASE_LABEL, APP_VERSION } from "@/lib/app-meta";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,6 +49,8 @@ const navItems = [
   { href: "/formula", label: "配方計算" },
   { href: "/brands", label: "品牌規則" },
   { href: "/about", label: "安全提醒" },
+  { href: "/beta", label: "Beta 試用" },
+  { href: "/feedback", label: "回饋" },
 ];
 
 export default function RootLayout({
@@ -60,6 +64,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="font-sans antialiased">
+        <BetaBanner />
         <header className="sticky top-0 z-40 border-b border-border bg-panel/90 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
             <Link href="/" aria-label="HairColor Formula Assistant 首頁">
@@ -80,7 +85,12 @@ export default function RootLayout({
         </header>
         <main className="min-w-0 overflow-x-clip pb-24 md:pb-0">{children}</main>
         <footer className="border-t border-border bg-panel/80 px-4 py-5 pb-28 text-center text-xs font-medium text-muted-foreground md:pb-5">
-          26肯邦AI進階課程｜李詩民
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between">
+            <span>26肯邦AI進階課程｜李詩民</span>
+            <span>
+              {APP_RELEASE_LABEL}｜{APP_VERSION}｜不儲存顧客資料
+            </span>
+          </div>
         </footer>
         <MobileNav />
       </body>

@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Calculator, Home, ShieldCheck } from "lucide-react";
+import {
+  BookOpen,
+  Calculator,
+  Home,
+  MessageSquareText,
+  ShieldCheck,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const mobileNavItems = [
@@ -9,6 +15,7 @@ const mobileNavItems = [
   { href: "/formula", label: "計算", icon: Calculator },
   { href: "/brands", label: "品牌", icon: BookOpen },
   { href: "/about", label: "安全", icon: ShieldCheck },
+  { href: "/feedback", label: "回饋", icon: MessageSquareText },
 ];
 
 export function MobileNav() {
@@ -16,7 +23,7 @@ export function MobileNav() {
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-panel/95 px-3 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-2 shadow-[0_-10px_30px_rgba(31,35,40,0.08)] backdrop-blur md:hidden">
-      <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
+      <div className="mx-auto grid max-w-md grid-cols-5 gap-1">
         {mobileNavItems.map((item) => {
           const Icon = item.icon;
           const active =
