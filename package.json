@@ -12,6 +12,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.0",
     "@vercel/analytics": "^2.0.1",
     "lucide-react": "^1.20.0",
     "next": "latest",

@@ -48,10 +48,13 @@
 
 - 全站 page view 會進入 Vercel Analytics。
 - 首頁會額外送出 `Homepage view` custom event。
-- 不需要環境變數。
+- 首頁公開訪問數使用 `/api/visits` 與 Upstash Redis 累計匿名總量。
+- 需要 Vercel Marketplace 連接 Upstash Redis，並注入 `UPSTASH_REDIS_REST_URL` 與 `UPSTASH_REDIS_REST_TOKEN`。
 - 不儲存顧客資料或配方內容。
 - 統計結果請到 Vercel Dashboard 的專案 `Analytics` 頁查看。
 - 若看不到資料，請先確認 Vercel Project 的 `Analytics` 已啟用，並等待正式部署後產生新訪問。
+
+若尚未設定 Upstash Redis，首頁會顯示「統計設定中」，不會阻擋主要功能。
 
 內部發佈檢查請見 `docs/BETA_TRIAL_RELEASE.md`。
 
