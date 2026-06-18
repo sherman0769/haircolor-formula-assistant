@@ -17,7 +17,7 @@ export default function FeedbackPage() {
           回報問題與試用建議
         </h1>
         <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-          目前不開放會員與資料庫，回饋請先用複製格式的方式交給管理者。若有顧客姓名、電話、照片或敏感資料，請先遮蔽後再傳送。
+          目前 Beta 版本使用 Google 表單收集試用回饋，協助補齊品牌規則、手機體驗與操作問題。請勿填寫顧客姓名、電話、地址或可識別個資。
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export default function FeedbackPage() {
             </div>
             <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
               <li>不要傳送顧客姓名、電話、地址或完整臉部照片。</li>
-              <li>若提供髮況照片，請先取得顧客同意並遮蔽可識別資訊。</li>
+              <li>目前表單不收檔案上傳；若提供截圖連結，請先遮蔽可識別資訊。</li>
               <li>請註明品牌、產品線、目前髮色與目標色，方便判斷問題。</li>
               <li>若是安全或風險疑慮，請先停止操作並由資深設計師現場判斷。</li>
             </ul>

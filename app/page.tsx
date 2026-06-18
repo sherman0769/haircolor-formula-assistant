@@ -35,7 +35,7 @@ const entryLinks = [
   {
     href: "/feedback",
     title: "Beta 試用回饋",
-    description: "複製回饋格式，回報操作問題、品牌資料缺口與手機體驗。",
+    description: "開啟回饋表單，回報操作問題、品牌資料缺口與手機體驗。",
     icon: MessageSquareText,
   },
 ];
