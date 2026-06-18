@@ -17,7 +17,7 @@ export type RuleAuditRow = {
 
 function hasFlexibleRatio(rule: BrandRule) {
   return rule.rules.mixingRules.some((mixingRule) =>
-    /-|–|~|to|up to|range|requires official manual|brand-dependent/i.test(
+    /-|–|~|to|up to|range|requires .*manual|manual required|brand-dependent/i.test(
       mixingRule.ratioLabel,
     ),
   );

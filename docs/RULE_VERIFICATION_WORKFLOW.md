@@ -64,6 +64,17 @@
 - The Color 10：Paul Mitchell eLearning 公開頁確認 10 分鐘、輕微提淺與最高白髮覆蓋方向，因此從 `unverified` 升為 `partial`；仍缺公開混合比例、色號族群與台灣肯邦現行供應確認。
 - Skylight：目前公開 Paul Mitchell Pro blonding 頁未見 Skylight，只能以供應商頁與公開許可資料作候選，維持 `partial`，不得升級。
 
+## 肯邦 / Paul Mitchell 第二批補齊結果
+
+2026-06-18 追加查核 Paul Mitchell 官方公開頁與 CosmoProf 專業供應商頁後，完成以下補強：
+
+- Color XG：補入 CosmoProf 專業供應商頁公開方向，包含 1:1、10/20/30/40 volume 與依雙氧區分的停留方向；因來源不是 Paul Mitchell / 肯邦官方技術手冊，且台灣色號、白髮自然基底比例與高明度規則仍未確認，維持 `partial`。
+- The Demi：補入 The Demi 專業供應商方向與 Processing Liquid 資料，標記 1:1 與低 volume Processing Liquid；另補入 The Demi Pre-Bonded 5-Minute Toners 官方教育頁，但 5 分鐘只可視為該變體方向，不可套用到全部 The Demi 服務，維持 `partial`。
+- The Color 10：補入 CosmoProf Canada 專業供應商頁公開方向，包含 1:1.5、20V Creme Developer、10 分鐘與 level 3-7 / 40-60% 灰髮客群方向；仍缺肯邦台灣現行供應、官方色號族群與完整白髮規則，維持 `partial`。
+- Skylight：Paul Mitchell Pro 官方 blonding 頁目前顯示 Pre-Bonded Lightener 與 The Demi Pre-Bonded 5-Minute Toners；未見 Skylight。Skylight 僅保留為供應商與歷史公開資料候選，不得升級。若後續肯邦確認代理的是 Pre-Bonded Lightener，應新增獨立產品線，不可與 Skylight 混用。
+
+本批補齊只提升資料完整度，不改變計算安全策略：所有肯邦 / Paul Mitchell 候選仍不得輸出精確克數。
+
 ## 實務原則
 
 寧可保守維持 `partial`，也不要讓系統用未完整建模的資料產生看似精確的克數。

@@ -240,6 +240,16 @@
     "notes": "Official Paul Mitchell course page confirms Color XG family product knowledge, 100% gray coverage positioning and formulation/mixing education; full technical content requires course access."
   },
   {
+    "id": "paul-mitchell-color-xg-cosmoprof",
+    "title": "Color XG Permanent Cream Hair Color",
+    "publisher": "CosmoProf / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.com/USA-M-570253.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier page with public directions for Color XG mixing ratio, developer volumes and processing times. Use as partial until confirmed against Paul Mitchell or Canbran official technical manual."
+  },
+  {
     "id": "paul-mitchell-the-demi-elearning",
     "title": "The Demi Product Knowledge",
     "publisher": "Paul Mitchell eLearning",
@@ -248,6 +258,36 @@
     "retrievedAt": "2026-06-18",
     "verification": "partial",
     "notes": "Official Paul Mitchell education page confirms The Demi as no-ammonia demi-permanent hair color and references formulation/mixing techniques; full ratios require course/manual access."
+  },
+  {
+    "id": "paul-mitchell-the-demi-prebonded-toners-elearning",
+    "title": "The Demi Pre-Bonded 5-Minute Toners Product Knowledge",
+    "publisher": "Paul Mitchell eLearning",
+    "sourceType": "official_education_page",
+    "url": "https://elearning.paulmitchell.com/courses/the-demi-pre-bonded-5-minute-toners-product-knowledge",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official education page confirms The Demi Pre-Bonded 5-Minute Toners are for saturated toning, neutralization and color enhancement on levels 8-10 in 5 minutes. Treat as a variant-specific note, not a general The Demi timing rule."
+  },
+  {
+    "id": "paul-mitchell-the-demi-cosmoprof",
+    "title": "The Demi by Paul Mitchell",
+    "publisher": "CosmoProf / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.com/USA-M-570278.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier page with public directions for The Demi equal-parts Processing Liquid mixing and up-to-20-minute application workflows. Use as partial until confirmed against Paul Mitchell or Canbran official technical manual."
+  },
+  {
+    "id": "paul-mitchell-processing-liquid-cosmoprof",
+    "title": "Processing Liquid",
+    "publisher": "CosmoProf / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.com/USA-577497.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier page identifies Paul Mitchell Processing Liquid as a low-volume processing liquid for PM Shines and The Demi. Use as partial supporting data only."
   },
   {
     "id": "paul-mitchell-gray-hair-official-article",
@@ -270,6 +310,16 @@
     "notes": "Official education page confirms The Color 10 slight lift, up to 100% gray coverage and 10-minute positioning. Full mixing rules and Canbran Taiwan availability still require manual verification."
   },
   {
+    "id": "paul-mitchell-the-color-10-cosmoprof-ca",
+    "title": "The Color 10 Permanent Hair Color",
+    "publisher": "CosmoProf Canada / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.ca/CAN-027079.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier Canada page with public directions for The Color 10 1:1.5 mixing, 20V Creme Developer and fast gray-service positioning. Not enough to verify Taiwan Canbran product availability or full shade-family rules."
+  },
+  {
     "id": "paul-mitchell-blonding-official-page",
     "title": "Paul Mitchell Blonding",
     "publisher": "Paul Mitchell Pro",
@@ -277,7 +327,17 @@
     "url": "https://pro.paulmitchell.com/blonding",
     "retrievedAt": "2026-06-18",
     "verification": "partial",
-    "notes": "Official Paul Mitchell Pro blonding page confirms current public blonding portfolio and toning direction. Skylight was not visible on this public page during review."
+    "notes": "Official Paul Mitchell Pro blonding page confirms current public blonding portfolio and toning direction, including Pre-Bonded Lightener and The Demi Pre-Bonded 5-Minute Toners. Skylight was not visible on this public page during review."
+  },
+  {
+    "id": "paul-mitchell-prebonded-lightener-cosmoprof",
+    "title": "BLONDE Pre-Bonded Lightener",
+    "publisher": "CosmoProf / John Paul Mitchell Systems",
+    "sourceType": "professional_supplier_page",
+    "url": "https://www.cosmoprofbeauty.com/USA-M-570448.html",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Professional supplier page gives Pre-Bonded Lightener ratio range, on-scalp developer cap, no-heat warning and maximum processing time. Keep partial because ratio is a range and Taiwan Canbran availability is not confirmed."
   },
   {
     "id": "paul-mitchell-skylight-cosmoprof",

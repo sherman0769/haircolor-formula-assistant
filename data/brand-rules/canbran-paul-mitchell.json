@@ -18,13 +18,14 @@
       "paul-mitchell-professional-hair-color-page",
       "paul-mitchell-color-xg-elearning",
       "paul-mitchell-xg-family-elearning",
+      "paul-mitchell-color-xg-cosmoprof",
       "taiwan-special-cosmetic-license-canbran-paul-mitchell"
     ],
-    "sourceTitle": "Canbran Paul Mitchell brand page, Paul Mitchell Color XG official education pages and public product-license references",
-    "sourceType": "official_brand_page + official_education_page + public_data_mirror",
+    "sourceTitle": "Canbran Paul Mitchell brand page, Paul Mitchell Color XG official education pages, professional supplier directions and public product-license references",
+    "sourceType": "official_brand_page + official_education_page + professional_supplier_page + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "Paul Mitchell 官方教育頁確認 Color XG 是永久染膏系統，涵蓋灰髮、自然色與冷色表現，並有混合與配方教育；完整比例、停留時間、台灣現行供應與許可仍需官方手冊或登入課程補齊。",
-    "notes": "Interim product-line option only. Public official pages confirm product positioning, but not enough public technical detail to output precise grams.",
+    "sourceNote": "Paul Mitchell 官方教育頁確認 Color XG 是永久染膏系統，涵蓋灰髮、自然色與冷色表現，並有混合與配方教育；CosmoProf 專業供應商頁公開列出 1:1、10-40 volume、灰髮 20 volume 與依雙氧區分的停留方向。仍需 Paul Mitchell 或肯邦現行官方技術手冊確認台灣規則、色號族群與白髮細節。",
+    "notes": "Interim product-line option only. Public official pages and professional supplier directions improve the model, but this remains partial because the current Taiwan technical manual and shade-family rules are not confirmed.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -32,27 +33,30 @@
           "id": "pm-color-xg-permanent-partial",
           "serviceType": "permanent",
           "ratio": 1,
-          "ratioLabel": "1:1 public reference; official Taiwan manual required",
-          "allowedDevelopers": [3, 6, 9],
+          "ratioLabel": "1:1 professional supplier reference; requires official Taiwan manual",
+          "allowedDevelopers": [3, 6, 9, 12],
           "processingTimeMin": 25,
-          "processingTimeMax": 45,
+          "processingTimeMax": 55,
           "conditions": [
-            "Permanent vegan cream color candidate for Paul Mitchell Color XG services."
+            "Permanent vegan cream color candidate for Paul Mitchell Color XG services.",
+            "Professional supplier directions list 10 volume for deposit/minimal lift, 20 volume for 1-2 levels or optimal coverage, 30 volume for 2-3 levels and 40 volume for 3-4 levels."
           ],
           "warnings": [
-            "Paul Mitchell public education page confirms the Color XG course covers mixing guidelines and recommended formulas, but the detailed rules are not exposed publicly."
+            "Supplier directions do not replace the Paul Mitchell or Canbran official technical manual.",
+            "Developer-specific processing time must be confirmed manually before use."
           ]
         },
         {
           "id": "pm-color-xg-retouch-partial",
           "serviceType": "retouch",
           "ratio": 1,
-          "ratioLabel": "1:1 public reference; official Taiwan manual required",
-          "allowedDevelopers": [3, 6],
+          "ratioLabel": "1:1 professional supplier reference; requires official Taiwan manual",
+          "allowedDevelopers": [3, 6, 9],
           "processingTimeMin": 25,
-          "processingTimeMax": 45,
+          "processingTimeMax": 55,
           "conditions": [
-            "Retouch candidate for new growth only."
+            "Retouch candidate for new growth only.",
+            "Select developer by lift need and white-hair coverage requirement, then confirm against official Color XG guidance."
           ],
           "warnings": [
             "Avoid overlap on previously colored porous lengths. Confirm official retouch timing."
@@ -62,12 +66,13 @@
           "id": "pm-color-xg-grey-partial",
           "serviceType": "grey-coverage",
           "ratio": 1,
-          "ratioLabel": "1:1 public reference; grey rules require official manual",
+          "ratioLabel": "1:1 professional supplier reference; grey rules require official manual",
           "allowedDevelopers": [6],
           "processingTimeMin": 35,
-          "processingTimeMax": 45,
+          "processingTimeMax": 35,
           "conditions": [
-            "Grey coverage candidate; Paul Mitchell education material positions Color XG for gray coverage and natural/cool tone work."
+            "Grey coverage candidate; Paul Mitchell education material positions Color XG for gray coverage and natural/cool tone work.",
+            "Professional supplier directions list 20 volume for gray coverage."
           ],
           "warnings": [
             "Natural base ratio and resistant grey rules are not verified for this MVP entry."
@@ -77,12 +82,13 @@
           "id": "pm-color-xg-high-lift-partial",
           "serviceType": "high-lift",
           "ratio": 2,
-          "ratioLabel": "1:2 public reference; high-lift rules require official manual",
-          "allowedDevelopers": [9, 12],
+          "ratioLabel": "1:2 professional supplier reference; high-lift rules require official manual",
+          "allowedDevelopers": [12],
           "processingTimeMin": 45,
-          "processingTimeMax": 60,
+          "processingTimeMax": 55,
           "conditions": [
-            "High-lift candidate only after confirming natural base level and official series rules."
+            "High-lift candidate only after confirming natural base level and official series rules.",
+            "Professional supplier directions describe highlifts as using double 40 volume and 45-55 minutes."
           ],
           "warnings": [
             "High-lift is risk-sensitive and must remain partial until official high-lift restrictions are modeled."
@@ -109,34 +115,35 @@
           "developerPercent": 3,
           "volume": 10,
           "liftRange": [0, 1],
-          "recommendedUse": ["deposit and low-lift reference"],
-          "restrictions": ["Confirm Color XG-compatible developer and current official instructions."]
+          "recommendedUse": ["deposit and minimal lift reference"],
+          "restrictions": ["Supplier directions list 25 minutes for deposit/minimal lift; confirm Color XG-compatible developer and current official instructions."]
         },
         {
           "developerPercent": 6,
           "volume": 20,
           "liftRange": [1, 2],
-          "recommendedUse": ["grey coverage and moderate lift reference"],
-          "restrictions": ["Confirm white-hair coverage family and processing time from official manual."]
+          "recommendedUse": ["grey coverage, optimal coverage and moderate lift reference"],
+          "restrictions": ["Supplier directions list 35 minutes for 1-2 levels or optimal coverage; confirm white-hair coverage family from official manual."]
         },
         {
           "developerPercent": 9,
           "volume": 30,
           "liftRange": [2, 3],
           "recommendedUse": ["higher lift reference"],
-          "restrictions": ["Avoid high-damage hair; confirm near-scalp limits."]
+          "restrictions": ["Supplier directions list 45 minutes for 2-3 levels of lift; avoid high-damage hair and confirm near-scalp limits."]
         },
         {
           "developerPercent": 12,
           "volume": 40,
           "liftRange": [3, 4],
-          "recommendedUse": ["high-lift reference"],
-          "restrictions": ["High-risk use; official high-lift rules and senior stylist confirmation required."]
+          "recommendedUse": ["3-4 levels lift and high-lift reference"],
+          "restrictions": ["Supplier directions list 45-55 minutes for 3-4 levels and highlifts; high-risk use requires official high-lift rules and senior stylist confirmation."]
         }
       ],
       "restrictions": [
         "This Canbran / Paul Mitchell Color XG entry is partial and cannot output precise grams.",
-        "Current official Taiwan technical manual, shade family rules, developer rules and product availability must be confirmed before upgrading."
+        "Current official Taiwan technical manual, shade family rules, developer rules and product availability must be confirmed before upgrading.",
+        "Professional supplier directions are reference data only and must not be treated as Canbran official instructions."
       ],
       "warnings": [
         "Use only as a product-line option and directional reference until verified."
@@ -161,14 +168,17 @@
       "canbran-paul-mitchell-the-demi-page",
       "paul-mitchell-professional-hair-color-page",
       "paul-mitchell-the-demi-elearning",
+      "paul-mitchell-the-demi-prebonded-toners-elearning",
+      "paul-mitchell-the-demi-cosmoprof",
+      "paul-mitchell-processing-liquid-cosmoprof",
       "paul-mitchell-gray-hair-official-article",
       "taiwan-special-cosmetic-license-canbran-paul-mitchell"
     ],
-    "sourceTitle": "Canbran The Demi campaign page and Paul Mitchell The Demi official education references",
-    "sourceType": "brand_campaign_page + official_education_page + official_web + public_data_mirror",
+    "sourceTitle": "Canbran The Demi campaign page, Paul Mitchell The Demi official education references and professional supplier directions",
+    "sourceType": "brand_campaign_page + official_education_page + official_web + professional_supplier_page + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "Canbran 頁確認 The Demi 可用於保鮮、增豔、矯色、色彩校正與灰髮霧化方向；Paul Mitchell 官方教育頁確認 The Demi 為無氨 demi-permanent 快速色彩服務。混合處理液比例與完整停留規則仍需官方手冊或登入課程。",
-    "notes": "The Demi should be treated as deposit/toning/correction and grey-blending direction in the MVP, not a lift or full grey-coverage engine.",
+    "sourceNote": "Canbran 頁確認 The Demi 可用於保鮮、增豔、矯色、色彩校正與灰髮霧化方向；Paul Mitchell 官方教育頁確認 The Demi 為無氨 demi-permanent 快速色彩服務；CosmoProf 專業供應商頁公開列出與 Processing Liquid 等量混合與最多 20 分鐘流程；Pre-Bonded 5-Minute Toners 為獨立快速調色變體。仍需 Paul Mitchell 或肯邦官方手冊確認台灣規則。",
+    "notes": "The Demi should be treated as deposit/toning/correction and grey-blending direction in the MVP, not a lift or full grey-coverage engine. The 5-minute toner timing belongs to the Pre-Bonded 5-Minute Toners variant and must not be applied to every The Demi shade.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -176,12 +186,14 @@
           "id": "pm-the-demi-toning-partial",
           "serviceType": "post-fade-toning",
           "ratio": 1,
-          "ratioLabel": "The Demi processing ratio requires official manual",
-          "allowedDevelopers": [1.9, 3],
+          "ratioLabel": "1:1 with Processing Liquid professional supplier reference; requires official Taiwan manual",
+          "allowedDevelopers": [2.25],
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
-            "Deposit-only toning, color refresh or shine service candidate after lightening or fading."
+            "Deposit-only toning, color refresh or shine service candidate after lightening or fading.",
+            "Professional supplier directions list equal parts The Demi shade and Paul Mitchell Processing Liquid.",
+            "Pre-Bonded 5-Minute Toners are a separate variant for levels 8-10 and should not change general The Demi timing."
           ],
           "warnings": [
             "Use only with the correct The Demi processing liquid or developer specified by the official manual."
@@ -191,8 +203,8 @@
           "id": "pm-the-demi-cool-adjustment-partial",
           "serviceType": "cool-tone-adjustment",
           "ratio": 1,
-          "ratioLabel": "The Demi processing ratio requires official manual",
-          "allowedDevelopers": [1.9, 3],
+          "ratioLabel": "1:1 with Processing Liquid professional supplier reference; requires official Taiwan manual",
+          "allowedDevelopers": [2.25],
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
@@ -206,12 +218,13 @@
           "id": "pm-the-demi-correction-partial",
           "serviceType": "color-correction",
           "ratio": 1,
-          "ratioLabel": "brand-dependent; official manual required",
-          "allowedDevelopers": [1.9, 3],
+          "ratioLabel": "1:1 with Processing Liquid professional supplier reference; requires official Taiwan manual",
+          "allowedDevelopers": [2.25],
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
-            "Color glossing, refresh, and tone-balancing candidate."
+            "Color glossing, refresh, and tone-balancing candidate.",
+            "For porous hair, professional supplier directions reference adding equal parts The Demi Clear and Processing Liquid to the remaining mixture before pulling through."
           ],
           "warnings": [
             "Corrective toning must be designed from the real undertone and porosity."
@@ -221,8 +234,8 @@
           "id": "pm-the-demi-grey-blend-partial",
           "serviceType": "grey-coverage",
           "ratio": 1,
-          "ratioLabel": "grey blending only; official manual required",
-          "allowedDevelopers": [1.9, 3],
+          "ratioLabel": "1:1 grey blending only; requires official Taiwan manual",
+          "allowedDevelopers": [2.25],
           "processingTimeMin": 5,
           "processingTimeMax": 20,
           "conditions": [
@@ -235,23 +248,17 @@
       ],
       "developerRules": [
         {
-          "developerPercent": 1.9,
-          "volume": 6,
+          "developerPercent": 2.25,
+          "volume": 7.5,
           "liftRange": [0, 0],
-          "recommendedUse": ["soft deposit and glossing reference"],
-          "restrictions": ["Processing liquid/developer must match official The Demi instructions."]
-        },
-        {
-          "developerPercent": 3,
-          "volume": 10,
-          "liftRange": [0, 0],
-          "recommendedUse": ["deposit-only correction reference"],
-          "restrictions": ["Confirm compatibility and timing before use."]
+          "recommendedUse": ["soft deposit, glossing, toning and grey-blending reference"],
+          "restrictions": ["Processing Liquid is listed as low-volume reference data by a professional supplier; confirm current official The Demi instructions before use."]
         }
       ],
       "restrictions": [
         "This The Demi entry is partial and cannot output precise grams.",
-        "Do not use for lift planning; treat as deposit, refresh, gloss, correction or grey-blending direction only."
+        "Do not use for lift planning; treat as deposit, refresh, gloss, correction or grey-blending direction only.",
+        "Do not apply the 5-minute toner timing to all The Demi shades; it is a variant-specific note for The Demi Pre-Bonded 5-Minute Toners."
       ],
       "warnings": [
         "Official The Demi technical manual is required before upgrading to verified."
@@ -271,36 +278,39 @@
     "verified": "partial",
     "sourceIds": [
       "canbran-paul-mitchell-brand-page",
-      "paul-mitchell-the-color-10-elearning"
+      "paul-mitchell-the-color-10-elearning",
+      "paul-mitchell-the-color-10-cosmoprof-ca"
     ],
-    "sourceTitle": "Paul Mitchell The Color 10 education page with Canbran brand context",
-    "sourceType": "official_education_page + official_brand_page",
+    "sourceTitle": "Paul Mitchell The Color 10 education page, professional supplier directions and Canbran brand context",
+    "sourceType": "official_education_page + official_brand_page + professional_supplier_page",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "Paul Mitchell 官方教育頁確認 The Color 10 是快速白髮服務，提供輕微提淺、最高白髮覆蓋與 10 分鐘處理時間方向；混合比例與完整配方步驟在課程/手冊中，公開頁未完整揭露。",
-    "notes": "Partial official positioning only. Keep blocked until current Canbran Taiwan availability, shade rules and exact mixing instructions are obtained.",
+    "sourceNote": "Paul Mitchell 官方教育頁確認 The Color 10 是快速白髮服務，提供輕微提淺、最高白髮覆蓋與 10 分鐘處理時間方向；CosmoProf Canada 專業供應商頁公開列出 1:1.5、20V Creme Developer、level 3-7 與 40-60% 灰髮客群方向。仍需肯邦台灣現行供應、官方手冊與色號族群規則確認。",
+    "notes": "Partial official positioning plus professional supplier directions. Keep blocked until current Canbran Taiwan availability, shade rules and exact mixing instructions are obtained.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
         {
           "id": "pm-the-color-10-grey-unverified",
           "serviceType": "grey-coverage",
-          "ratio": 1,
-          "ratioLabel": "10-minute grey service; ratio requires official manual",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5 professional supplier reference; requires official Taiwan manual",
           "allowedDevelopers": [6],
           "processingTimeMin": 10,
           "processingTimeMax": 10,
           "conditions": [
-            "Express grey service candidate. Official Paul Mitchell education page confirms slight lift, up to 100% gray coverage and fast 10-minute processing."
+            "Express grey service candidate. Official Paul Mitchell education page confirms slight lift, up to 100% gray coverage and fast 10-minute processing.",
+            "Professional supplier Canada directions list 20V Creme Developer and ideal guests with levels 3-7 and 40-60% gray."
           ],
           "warnings": [
-            "Public official page does not expose exact mixing ratio, shade family rules or developer selection."
+            "Public official page does not expose full shade-family rules or Canbran Taiwan availability.",
+            "Professional supplier data must be confirmed against Paul Mitchell or Canbran official technical material before use."
           ]
         },
         {
           "id": "pm-the-color-10-retouch-unverified",
           "serviceType": "retouch",
-          "ratio": 1,
-          "ratioLabel": "10-minute retouch service; ratio requires official manual",
+          "ratio": 1.5,
+          "ratioLabel": "1:1.5 retouch reference; requires official Taiwan manual",
           "allowedDevelopers": [6],
           "processingTimeMin": 10,
           "processingTimeMax": 10,
@@ -318,7 +328,7 @@
           "volume": 20,
           "liftRange": [0, 1],
           "recommendedUse": ["express grey blending or coverage reference"],
-          "restrictions": ["Developer and shade family must be confirmed by official technical material."]
+          "restrictions": ["Professional supplier Canada page lists 20V Creme Developer; developer and shade family must be confirmed by official technical material."]
         }
       ],
       "restrictions": [
@@ -349,8 +359,8 @@
     "sourceTitle": "Paul Mitchell official blonding page review, Skylight supplier page and Canbran public product-license reference",
     "sourceType": "official_brand_page + professional_supplier_page + public_data_mirror",
     "retrievedAt": "2026-06-18",
-    "sourceNote": "目前公開 Paul Mitchell Pro blonding 頁確認現行金髮/漂染產品線方向，但未見 Skylight；Skylight 仍依供應商頁與公開許可資料作候選，需肯邦或 Paul Mitchell 現行官方手冊確認。",
-    "notes": "Lightener candidate only. Do not upgrade until Skylight current Taiwan supply and official technical manual are confirmed.",
+    "sourceNote": "目前公開 Paul Mitchell Pro blonding 頁確認現行金髮/漂染產品線方向，並主推 Pre-Bonded Lightener 與 The Demi Pre-Bonded 5-Minute Toners，但未見 Skylight；Skylight 仍依供應商頁與公開許可資料作候選，需肯邦或 Paul Mitchell 現行官方手冊確認。",
+    "notes": "Lightener candidate only. Do not upgrade until Skylight current Taiwan supply and official technical manual are confirmed. If Canbran confirms the newer Pre-Bonded Lightener instead of Skylight, add it as a separate product line rather than merging both products.",
     "rules": {
       "developerAdjustmentMode": "none",
       "mixingRules": [
@@ -363,7 +373,8 @@
           "processingTimeMin": 5,
           "processingTimeMax": 50,
           "conditions": [
-            "Freehand lightening or balayage candidate; current Paul Mitchell official blonding page should be checked before use because public page did not expose Skylight."
+            "Freehand lightening or balayage candidate; current Paul Mitchell official blonding page should be checked before use because public page did not expose Skylight.",
+            "Current Paul Mitchell public blonding direction highlights Pre-Bonded Lightener, so Skylight must be treated as an availability-unconfirmed candidate."
           ],
           "warnings": [
             "Lightener work is high risk; official Canbran or Paul Mitchell Skylight manual and strand test required before exact formula."

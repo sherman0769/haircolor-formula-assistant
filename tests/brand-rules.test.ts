@@ -58,4 +58,49 @@ describe("brand rules", () => {
       ),
     ).toBe(true);
   });
+
+  it("records supplemented Canbran Paul Mitchell public reference details without verification upgrade", () => {
+    const canbranRules = getBrandRules().filter(
+      (rule) => rule.brandId === "canbran-paul-mitchell",
+    );
+    const colorXg = canbranRules.find(
+      (rule) => rule.productLineId === "paul-mitchell-color-xg",
+    );
+    const theDemi = canbranRules.find(
+      (rule) => rule.productLineId === "paul-mitchell-the-demi",
+    );
+    const color10 = canbranRules.find(
+      (rule) => rule.productLineId === "paul-mitchell-the-color-10",
+    );
+    const skylight = canbranRules.find(
+      (rule) => rule.productLineId === "paul-mitchell-skylight",
+    );
+
+    expect(colorXg?.verified).toBe("partial");
+    expect(colorXg?.sourceIds).toContain("paul-mitchell-color-xg-cosmoprof");
+    expect(
+      colorXg?.rules.mixingRules.find((rule) => rule.serviceType === "permanent")
+        ?.allowedDevelopers,
+    ).toEqual([3, 6, 9, 12]);
+
+    expect(theDemi?.verified).toBe("partial");
+    expect(theDemi?.sourceIds).toContain("paul-mitchell-the-demi-cosmoprof");
+    expect(theDemi?.sourceIds).toContain(
+      "paul-mitchell-processing-liquid-cosmoprof",
+    );
+    expect(theDemi?.rules.developerRules[0].volume).toBe(7.5);
+
+    expect(color10?.verified).toBe("partial");
+    expect(color10?.sourceIds).toContain(
+      "paul-mitchell-the-color-10-cosmoprof-ca",
+    );
+    expect(
+      color10?.rules.mixingRules.find(
+        (rule) => rule.serviceType === "grey-coverage",
+      )?.ratio,
+    ).toBe(1.5);
+
+    expect(skylight?.verified).toBe("partial");
+    expect(skylight?.notes).toContain("Pre-Bonded Lightener");
+  });
 });
