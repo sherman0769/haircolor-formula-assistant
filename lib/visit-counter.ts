@@ -4,19 +4,32 @@ const VISIT_COUNTER_KEY = "haircolor:homepage:unique-visits";
 
 let redisClient: Redis | null = null;
 
+function getVisitCounterEnv() {
+  const url =
+    process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token =
+    process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+
+  return { token, url };
+}
+
 export function hasVisitCounterConfig() {
-  return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL &&
-      process.env.UPSTASH_REDIS_REST_TOKEN,
-  );
+  const { token, url } = getVisitCounterEnv();
+
+  return Boolean(url && token);
 }
 
 function getRedisClient() {
-  if (!hasVisitCounterConfig()) {
+  const { token, url } = getVisitCounterEnv();
+
+  if (!url || !token) {
     return null;
   }
 
-  redisClient ??= Redis.fromEnv();
+  redisClient ??= new Redis({
+    token,
+    url,
+  });
 
   return redisClient;
 }
