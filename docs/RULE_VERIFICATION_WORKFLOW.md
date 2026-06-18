@@ -75,6 +75,30 @@
 
 本批補齊只提升資料完整度，不改變計算安全策略：所有肯邦 / Paul Mitchell 候選仍不得輸出精確克數。
 
+## LebeL edol / MATERIA 設計師回饋新增
+
+2026-06-18 依設計師回饋加入 LebeL 產品線候選：
+
+- edol 透明感染髮系列：`partial`
+- edol qon 灰髮透明感染髮系列：`partial`
+- edol bleach 漂粉：`partial`
+- MATERIA 透明感染髮系列：`partial`
+- MATERIA μ 低鹼染髮系列：`partial`
+- MATERIA G 灰髮染髮系列：`partial`
+
+本次使用 LebeL / Takara Belmont 官方公開產品頁與官方公開色卡 PDF 作為來源。公開資料可確認產品線、沙龍技術者專用定位、部分 Oxy 濃度與部分混合比例，例如 edol 一般比例、Level 15 / LT-EX 方向，以及 MATERIA / MATERIA μ / MATERIA G 的公開比例方向。
+
+但目前仍缺：
+
+- 完整官方技術手冊。
+- 產品線各色號族群與雙氧選擇條件。
+- 停留時間。
+- 白髮覆蓋、自然基底色與抗拒白髮規則。
+- 漂粉頭皮限制、最高停留時間與熱源規則。
+- 台灣或目標地區現行供應與教育資料確認。
+
+因此所有 LebeL edol / MATERIA 規則目前只作為品牌選項與方向性資料，不輸出精確克數。若未來取得完整官方手冊，必須補齊測試案例與人工審核紀錄後才能評估升級。
+
 ## 實務原則
 
 寧可保守維持 `partial`，也不要讓系統用未完整建模的資料產生看似精確的克數。

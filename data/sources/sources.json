@@ -360,6 +360,136 @@
     "notes": "Historical public-license reference showing Canbran applicant records for Paul Mitchell color-related products. Dates shown must be rechecked against the current official Taiwan regulatory database before any verified claim."
   },
   {
+    "id": "lebel-edol-series-official",
+    "title": "edol Series",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/series/edol/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official LebeL edol series page confirms edol color, edol qon, edol yoyo, edol Oxy 6%, Oxy 2%, Oxy AC1%, bleach and salon-technician positioning. Full technical use rules require official manual confirmation."
+  },
+  {
+    "id": "lebel-edol-item-official",
+    "title": "edol Product Item",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/646/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms edol is salon-technician-only, 80 g, with 81 colors plus lightener and clear. Public page does not expose full processing and shade-family rules."
+  },
+  {
+    "id": "lebel-edol-oxy6-official",
+    "title": "edol Oxy 6%",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/644/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms edol Oxy 6% as peroxide second agent for edol. Developer selection rules remain partial without the full technical manual."
+  },
+  {
+    "id": "lebel-edol-oxy2-official",
+    "title": "edol Oxy 2%",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/642/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms edol Oxy 2% as peroxide second agent for edol. Developer selection rules remain partial without the full technical manual."
+  },
+  {
+    "id": "lebel-edol-bleach-official",
+    "title": "edol bleach",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/640/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms edol bleach is salon-technician-only powder bleach and includes persulfate-related precautions. Full bleach ratio, scalp limits and processing rules require manual verification."
+  },
+  {
+    "id": "lebel-edol-qon-official",
+    "title": "edol qon Product Item",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/3612/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms edol qon as a gray-hair color line with 61 colors and 120 g format. Full gray coverage formula rules require technical manual confirmation."
+  },
+  {
+    "id": "lebel-edol-pdf",
+    "title": "edol Color Line-up",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_pdf",
+    "url": "https://www.lebel-takara.com/cms/wp-content/uploads/2022/06/edol.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official public PDF color line-up includes edol ratio references such as standard edol 1:1, level 15 1:2 and LT-EX 1:3 with edol Oxy. It does not provide all conditions needed for verified rule output."
+  },
+  {
+    "id": "lebel-materia-series-official",
+    "title": "MATERIA Series",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/series/materia/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official LebeL MATERIA series page confirms MATERIA, MATERIA mu, MATERIA G and OXY developer product lines. Public page does not expose complete technical rules."
+  },
+  {
+    "id": "lebel-materia-item-official",
+    "title": "MATERIA Product Item",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/612/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms MATERIA is salon-technician-only, 80 g, with 100 colors plus lighteners. Full processing and shade-family rules require manual confirmation."
+  },
+  {
+    "id": "lebel-materia-mu-official",
+    "title": "MATERIA mu Product Item",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/610/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms MATERIA mu is a low-alkaline type, 80 g, with 67 colors plus clear. Full processing rules require manual confirmation."
+  },
+  {
+    "id": "lebel-materia-g-official",
+    "title": "MATERIA G Product Item",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_web",
+    "url": "https://www.lebel-takara.com/products/item/608/",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official item page confirms MATERIA G as a gray color line, 120 g, with 84 colors plus clear. Full white-hair coverage ratios and conditions require manual confirmation."
+  },
+  {
+    "id": "lebel-materia-pdf",
+    "title": "MATERIA / MATERIA mu Color Chart",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_pdf",
+    "url": "https://www.lebel-takara.com/cms/wp-content/uploads/2022/06/MATERIA.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official public PDF color chart includes MATERIA 1+3 with MATERIA OXY W and MATERIA mu 1+1 with MATERIA OXY W 3%. Keep partial until full technical manual conditions are modeled."
+  },
+  {
+    "id": "lebel-materia-g-pdf",
+    "title": "MATERIA G Color Chart",
+    "publisher": "LebeL / Takara Belmont",
+    "sourceType": "official_pdf",
+    "url": "https://www.lebel-takara.com/cms/wp-content/uploads/2022/06/MATERIAG.pdf",
+    "retrievedAt": "2026-06-18",
+    "verification": "partial",
+    "notes": "Official public PDF color chart includes MATERIA G 1+1 with MATERIA OXY W. Keep partial until full gray coverage conditions and processing rules are modeled."
+  },
+  {
     "id": "generic-education-policy",
     "title": "Generic Education Rules Policy",
     "publisher": "Project seed data",

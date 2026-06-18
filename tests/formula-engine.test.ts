@@ -124,6 +124,37 @@ describe("calculateFormula", () => {
     }
   });
 
+  it("does not output precise grams for LebeL edol and MATERIA candidate lines", () => {
+    const candidateLines: Array<{
+      productLineId: string;
+      serviceType: FormulaInput["serviceType"];
+    }> = [
+      { productLineId: "lebel-edol", serviceType: "permanent" },
+      { productLineId: "lebel-edol-qon", serviceType: "grey-coverage" },
+      { productLineId: "lebel-edol-bleach", serviceType: "bleach" },
+      { productLineId: "lebel-materia", serviceType: "permanent" },
+      { productLineId: "lebel-materia-mu", serviceType: "post-fade-toning" },
+      { productLineId: "lebel-materia-g", serviceType: "grey-coverage" },
+    ];
+
+    for (const candidate of candidateLines) {
+      const output = calculateFormula(
+        buildInput({
+          brandId: "lebel",
+          productLineId: candidate.productLineId,
+          serviceType: candidate.serviceType,
+        }),
+      );
+
+      expect(output.totalColorGrams).toBeNull();
+      expect(output.totalDeveloperGrams).toBeNull();
+      expect(output.formulaItems[0].role).toBe("reference");
+      expect(output.confidenceLevel).toBe("low");
+      expect(output.riskWarnings.join(" ")).toContain("品牌資料未完整 verified");
+      expect(output.processSteps.join(" ")).toContain("官方技術手冊確認");
+    }
+  });
+
   it("blocks precise grams for high-risk black dye lift", () => {
     const output = calculateFormula(
       buildInput({

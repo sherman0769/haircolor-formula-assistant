@@ -1,0 +1,507 @@
+[
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-edol",
+    "productLineName": "edol 透明感染髮系列",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["permanent", "retouch", "color-correction", "high-lift"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-edol-series-official",
+      "lebel-edol-item-official",
+      "lebel-edol-oxy6-official",
+      "lebel-edol-oxy2-official",
+      "lebel-edol-pdf"
+    ],
+    "sourceTitle": "LebeL edol official product pages and public color line-up PDF",
+    "sourceType": "official_web + official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 edol 為沙龍技術者專用染髮系列，包含 edol Oxy 6%、2%、AC1%、LT/LT-EX 與 clear；公開 PDF 顯示一般 edol 1:1、Level 15 1:2、LT-EX 1:3 的比例方向。仍缺完整技術手冊、色號族群、停留時間與區域供應確認。",
+    "notes": "Added from designer feedback as a partial product-line option. Do not output precise grams until full official technical rules are available.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-edol-permanent-partial",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1 official PDF reference; requires full official technical manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "edol permanent color candidate for transparent color work.",
+            "Official public PDF lists standard edol ratio as 1:1 with edol Oxy."
+          ],
+          "warnings": [
+            "Official public pages do not expose full processing time, shade-family rules or developer selection logic."
+          ]
+        },
+        {
+          "id": "lebel-edol-retouch-partial",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1 retouch reference; requires full official technical manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Retouch candidate for new growth only after confirming real base level."
+          ],
+          "warnings": [
+            "Retouch timing and overlap rules must be confirmed from the current LebeL technical manual."
+          ]
+        },
+        {
+          "id": "lebel-edol-level15-partial",
+          "serviceType": "high-lift",
+          "ratio": 2,
+          "ratioLabel": "Level 15 1:2 official PDF reference; requires full official technical manual",
+          "allowedDevelopers": [6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Level 15 / high-brightness candidate only where official edol guidance permits."
+          ],
+          "warnings": [
+            "High-lift use is risk-sensitive; full edol level and base restrictions are required before precise output."
+          ]
+        },
+        {
+          "id": "lebel-edol-lt-ex-partial",
+          "serviceType": "color-correction",
+          "ratio": 3,
+          "ratioLabel": "LT-EX 1:3 official PDF reference; requires full official technical manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "LT-EX / lightener-related use must be designed by a senior stylist after strand testing."
+          ],
+          "warnings": [
+            "Do not use LT-EX ratio as a universal correction formula; exact use case requires official manual confirmation."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 2,
+          "volume": 7,
+          "liftRange": [0, 1],
+          "recommendedUse": ["low-lift or deposit direction reference"],
+          "restrictions": ["Confirm edol Oxy 2% use cases from the official technical manual."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 3],
+          "recommendedUse": ["lift and color development direction reference"],
+          "restrictions": ["Confirm edol Oxy 6% use cases, scalp limits and timing from the official technical manual."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL edol entry is partial and cannot output precise grams.",
+        "Full official technical manual, shade-family rules, developer selection and processing times are required before upgrading."
+      ],
+      "warnings": [
+        "Every hair color service requires skin allergy test and strand test before real application."
+      ]
+    }
+  },
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-edol-qon",
+    "productLineName": "edol qon 灰髮透明感染髮系列",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["grey-coverage", "retouch"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-edol-series-official",
+      "lebel-edol-qon-official",
+      "lebel-edol-pdf"
+    ],
+    "sourceTitle": "LebeL edol qon official product page and edol public color line-up references",
+    "sourceType": "official_web + official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 edol qon 為灰髮染線，61 色、120g，定位為抑制紅感與濁感並讓黑髮與灰髮呈現透明感。公開頁未揭露完整白髮覆蓋比例、自然基底色規則與停留時間。",
+    "notes": "Added from designer feedback as a partial gray-color option. Do not output precise grams.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-edol-qon-grey-partial",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "gray color ratio requires official edol qon technical manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Gray-hair color candidate where edol qon is available and stylist confirms base and gray percentage."
+          ],
+          "warnings": [
+            "White-hair percentage, natural base support and resistant gray rules are not yet modeled."
+          ]
+        },
+        {
+          "id": "lebel-edol-qon-retouch-partial",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "retouch ratio requires official edol qon technical manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Retouch candidate for gray regrowth after manual base confirmation."
+          ],
+          "warnings": [
+            "Retouch saturation and timing require current official edol qon education material."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 2,
+          "volume": 7,
+          "liftRange": [0, 1],
+          "recommendedUse": ["low-lift gray blending direction reference"],
+          "restrictions": ["Confirm edol qon developer rules from official manual."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["gray coverage direction reference"],
+          "restrictions": ["Confirm white-hair coverage and resistant gray rules from official manual."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL edol qon entry is partial and cannot output precise grams.",
+        "White-hair coverage rules, natural base support and processing time must be confirmed before upgrading."
+      ],
+      "warnings": [
+        "Use only as a product-line option and directional reference until verified."
+      ]
+    }
+  },
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-edol-bleach",
+    "productLineName": "edol bleach 漂粉",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["bleach"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-edol-series-official",
+      "lebel-edol-bleach-official",
+      "lebel-edol-oxy6-official",
+      "lebel-edol-oxy2-official"
+    ],
+    "sourceTitle": "LebeL edol bleach official product page and edol Oxy official pages",
+    "sourceType": "official_web",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 edol bleach 為沙龍技術者專用漂粉，並有過硫酸鹽類漂粉安全提醒；公開頁未揭露完整漂粉比例、頭皮限制與最高停留時間。",
+    "notes": "Lightener candidate only. Do not upgrade until current official bleach manual and local availability are confirmed.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-edol-bleach-partial",
+          "serviceType": "bleach",
+          "ratio": 2,
+          "ratioLabel": "bleach ratio requires official edol bleach manual",
+          "allowedDevelopers": [2, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Bleach candidate only after strand test, scalp sensitivity check and senior stylist assessment."
+          ],
+          "warnings": [
+            "Public page does not expose full bleach mixing ratio, scalp limits, heat rules or processing time."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 2,
+          "volume": 7,
+          "liftRange": [0, 2],
+          "recommendedUse": ["low-risk lightening direction reference"],
+          "restrictions": ["Confirm edol bleach developer compatibility and ratio before use."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 4],
+          "recommendedUse": ["moderate lightening direction reference"],
+          "restrictions": ["Do not use on high-damage, repeated-bleach or scalp-sensitive cases without senior stylist assessment."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL edol bleach entry is partial and cannot output precise grams.",
+        "Bleach work is high risk and requires official manual, strand test and senior stylist confirmation."
+      ],
+      "warnings": [
+        "Do not use on anyone with prior irritation from products including persulfates."
+      ]
+    }
+  },
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-materia",
+    "productLineName": "MATERIA 透明感染髮系列",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["permanent", "retouch", "color-correction", "high-lift"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-materia-series-official",
+      "lebel-materia-item-official",
+      "lebel-materia-pdf"
+    ],
+    "sourceTitle": "LebeL MATERIA official product pages and public color chart PDF",
+    "sourceType": "official_web + official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 MATERIA 為沙龍技術者專用，80g、100 色加 LT/LT-EX；官方 PDF 顯示 MATERIA 第一劑與 MATERIA OXY W 第二劑比例為 1+3。仍缺完整技術手冊、停留時間、雙氧情境與色號族群規則。",
+    "notes": "Added from designer feedback. Official ratio exists, but product remains partial because full technical conditions are not modeled.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-materia-permanent-partial",
+          "serviceType": "permanent",
+          "ratio": 3,
+          "ratioLabel": "1:3 official PDF reference; requires full official technical manual",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "MATERIA permanent color candidate after manual base and target shade confirmation.",
+            "Official public PDF lists MATERIA first agent 1+3 with MATERIA OXY W second agent."
+          ],
+          "warnings": [
+            "A 1:3 ratio must not be used without official context; exact developer and timing rules remain unverified."
+          ]
+        },
+        {
+          "id": "lebel-materia-retouch-partial",
+          "serviceType": "retouch",
+          "ratio": 3,
+          "ratioLabel": "1:3 retouch reference; requires full official technical manual",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Retouch candidate for new growth only."
+          ],
+          "warnings": [
+            "Overlap and timing rules must be confirmed from current MATERIA technical material."
+          ]
+        },
+        {
+          "id": "lebel-materia-correction-partial",
+          "serviceType": "color-correction",
+          "ratio": 3,
+          "ratioLabel": "1:3 correction reference; requires full official technical manual",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Corrective use must be based on strand testing and real undertone."
+          ],
+          "warnings": [
+            "Do not use the public color chart ratio as a universal color-correction formula."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["tone-on-tone or low-lift direction reference"],
+          "restrictions": ["Confirm MATERIA OXY W 3% use cases from official manual."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 3],
+          "recommendedUse": ["lift and color development direction reference"],
+          "restrictions": ["Confirm MATERIA OXY W 6% use cases, scalp limits and timing from official manual."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL MATERIA entry is partial and cannot output precise grams.",
+        "Official ratio alone is not enough for verified output; processing time, developer selection and shade-family rules are still required."
+      ],
+      "warnings": [
+        "Every hair color service requires skin allergy test and strand test before real application."
+      ]
+    }
+  },
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-materia-mu",
+    "productLineName": "MATERIA μ 低鹼染髮系列",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["permanent", "retouch", "post-fade-toning", "cool-tone-adjustment"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-materia-series-official",
+      "lebel-materia-mu-official",
+      "lebel-materia-pdf"
+    ],
+    "sourceTitle": "LebeL MATERIA mu official product page and public color chart PDF",
+    "sourceType": "official_web + official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 MATERIA μ 為低鹼型，80g、67 色加 clear；官方 PDF 顯示 MATERIA μ 第一劑與 MATERIA OXY W 3% 第二劑比例為 1+1。仍缺完整使用條件與停留時間。",
+    "notes": "Low-alkaline MATERIA option added as partial. Do not output precise grams until full rules are confirmed.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-materia-mu-permanent-partial",
+          "serviceType": "permanent",
+          "ratio": 1,
+          "ratioLabel": "1:1 with OXY W 3% official PDF reference; requires full official technical manual",
+          "allowedDevelopers": [3],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Low-alkaline color candidate for color-treated hair where MATERIA mu is appropriate."
+          ],
+          "warnings": [
+            "Full service conditions and timing are not exposed in the public page."
+          ]
+        },
+        {
+          "id": "lebel-materia-mu-toning-partial",
+          "serviceType": "post-fade-toning",
+          "ratio": 1,
+          "ratioLabel": "1:1 toning reference; requires full official technical manual",
+          "allowedDevelopers": [3],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Toning or faded-color refresh candidate only after porosity and undertone confirmation."
+          ],
+          "warnings": [
+            "Porous hair may over-deposit; strand test is required."
+          ]
+        },
+        {
+          "id": "lebel-materia-mu-cool-adjustment-partial",
+          "serviceType": "cool-tone-adjustment",
+          "ratio": 1,
+          "ratioLabel": "1:1 cool adjustment reference; requires full official technical manual",
+          "allowedDevelopers": [3],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Cool-tone adjustment candidate on pre-lightened or faded hair."
+          ],
+          "warnings": [
+            "Correction must be designed from observed undertone and strand test result."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["low-alkaline color, refresh and tone direction reference"],
+          "restrictions": ["Official public PDF points to OXY W 3%; confirm full use conditions before use."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL MATERIA mu entry is partial and cannot output precise grams.",
+        "Full processing time, color family and porosity handling rules are required before upgrading."
+      ],
+      "warnings": [
+        "Use only as a product-line option and directional reference until verified."
+      ]
+    }
+  },
+  {
+    "brandId": "lebel",
+    "brandName": "LebeL",
+    "productLineId": "lebel-materia-g",
+    "productLineName": "MATERIA G 灰髮染髮系列",
+    "region": "Japan / Global public data; local salon supply requires confirmation",
+    "serviceTypes": ["grey-coverage", "retouch"],
+    "verified": "partial",
+    "sourceIds": [
+      "lebel-materia-series-official",
+      "lebel-materia-g-official",
+      "lebel-materia-g-pdf"
+    ],
+    "sourceTitle": "LebeL MATERIA G official product page and public color chart PDF",
+    "sourceType": "official_web + official_pdf",
+    "retrievedAt": "2026-06-18",
+    "sourceNote": "LebeL 官方頁確認 MATERIA G 為灰髮染線，120g、84 色加 clear；官方 PDF 顯示 MATERIA G 第一劑與 MATERIA OXY W 第二劑比例為 1+1。仍缺完整白髮覆蓋比例、自然基底色與抗拒白髮規則。",
+    "notes": "Gray coverage MATERIA option added as partial. Do not output precise grams.",
+    "rules": {
+      "developerAdjustmentMode": "none",
+      "mixingRules": [
+        {
+          "id": "lebel-materia-g-grey-partial",
+          "serviceType": "grey-coverage",
+          "ratio": 1,
+          "ratioLabel": "1:1 official PDF reference; gray rules require full official technical manual",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Gray coverage candidate after confirming gray percentage, natural level and resistant areas."
+          ],
+          "warnings": [
+            "Natural base support and resistant white-hair rules are not yet modeled."
+          ]
+        },
+        {
+          "id": "lebel-materia-g-retouch-partial",
+          "serviceType": "retouch",
+          "ratio": 1,
+          "ratioLabel": "1:1 retouch reference; gray rules require full official technical manual",
+          "allowedDevelopers": [3, 6],
+          "processingTimeMin": 0,
+          "processingTimeMax": 0,
+          "conditions": [
+            "Gray regrowth retouch candidate only after manual base confirmation."
+          ],
+          "warnings": [
+            "Retouch saturation and timing require current official MATERIA G education material."
+          ]
+        }
+      ],
+      "developerRules": [
+        {
+          "developerPercent": 3,
+          "volume": 10,
+          "liftRange": [0, 1],
+          "recommendedUse": ["tone-on-tone or gray blending direction reference"],
+          "restrictions": ["Confirm MATERIA G OXY W 3% use cases from official manual."]
+        },
+        {
+          "developerPercent": 6,
+          "volume": 20,
+          "liftRange": [1, 2],
+          "recommendedUse": ["gray coverage direction reference"],
+          "restrictions": ["Confirm MATERIA G OXY W 6% use cases and resistant gray handling from official manual."]
+        }
+      ],
+      "restrictions": [
+        "This LebeL MATERIA G entry is partial and cannot output precise grams.",
+        "White-hair coverage rules, natural base support and processing time must be confirmed before upgrading."
+      ],
+      "warnings": [
+        "Every hair color service requires skin allergy test and strand test before real application."
+      ]
+    }
+  }
+]

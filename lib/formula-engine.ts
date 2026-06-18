@@ -297,9 +297,15 @@ function buildProcessSteps(
     steps.push("白髮覆蓋可優先塗佈白髮集中或抗拒區，並確認自然基底色比例。");
   }
 
-  steps.push(
-    `建議停留時間範圍：${mixingRule.processingTimeMin}-${mixingRule.processingTimeMax} 分鐘；仍需以 ${brandRule.productLineName} 官方技術資料與現場髮況為準。`,
-  );
+  if (mixingRule.processingTimeMin <= 0 || mixingRule.processingTimeMax <= 0) {
+    steps.push(
+      `停留時間需依 ${brandRule.productLineName} 官方技術手冊確認；目前資料不足，不建議依系統時間操作。`,
+    );
+  } else {
+    steps.push(
+      `建議停留時間範圍：${mixingRule.processingTimeMin}-${mixingRule.processingTimeMax} 分鐘；仍需以 ${brandRule.productLineName} 官方技術資料與現場髮況為準。`,
+    );
+  }
   steps.push("沖洗前乳化並完整清潔，後續照護依品牌與沙龍流程執行。");
 
   return steps;

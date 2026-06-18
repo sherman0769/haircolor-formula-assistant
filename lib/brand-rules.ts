@@ -1,5 +1,6 @@
 import genericRules from "@/data/brand-rules/generic-rules.json";
 import canbranPaulMitchellRules from "@/data/brand-rules/canbran-paul-mitchell.json";
+import lebelEdolMateriaRules from "@/data/brand-rules/lebel-edol-materia.json";
 import lorealMajirelRules from "@/data/brand-rules/loreal-majirel.json";
 import milbonSophistoneRules from "@/data/brand-rules/milbon-sophistone.json";
 import schwarzkopfBlondmeRules from "@/data/brand-rules/schwarzkopf-blondme.json";
@@ -14,6 +15,7 @@ const brandRules = [
   ...(schwarzkopfIgoraRules as BrandRule[]),
   ...(schwarzkopfBlondmeRules as BrandRule[]),
   ...(milbonSophistoneRules as BrandRule[]),
+  ...(lebelEdolMateriaRules as BrandRule[]),
   ...(canbranPaulMitchellRules as BrandRule[]),
   ...(genericRules as BrandRule[]),
 ];

@@ -103,4 +103,36 @@ describe("brand rules", () => {
     expect(skylight?.verified).toBe("partial");
     expect(skylight?.notes).toContain("Pre-Bonded Lightener");
   });
+
+  it("adds LebeL edol and MATERIA candidates from designer feedback conservatively", () => {
+    const lebelRules = getBrandRules().filter(
+      (rule) => rule.brandId === "lebel",
+    );
+
+    expect(lebelRules.map((rule) => rule.productLineId).sort()).toEqual([
+      "lebel-edol",
+      "lebel-edol-bleach",
+      "lebel-edol-qon",
+      "lebel-materia",
+      "lebel-materia-g",
+      "lebel-materia-mu",
+    ]);
+    expect(lebelRules.every((rule) => rule.verified === "partial")).toBe(true);
+    expect(
+      lebelRules.every((rule) =>
+        rule.rules.restrictions.some((restriction) =>
+          restriction.includes("cannot output precise grams"),
+        ),
+      ),
+    ).toBe(true);
+    expect(
+      lebelRules.every((rule) =>
+        rule.rules.mixingRules.some(
+          (mixingRule) =>
+            mixingRule.processingTimeMin === 0 &&
+            mixingRule.processingTimeMax === 0,
+        ),
+      ),
+    ).toBe(true);
+  });
 });

@@ -36,8 +36,14 @@ function uniqueDevelopers(rule: BrandRule) {
 function processingRange(rule: BrandRule) {
   const mins = rule.rules.mixingRules.map((mixingRule) => mixingRule.processingTimeMin);
   const maxes = rule.rules.mixingRules.map((mixingRule) => mixingRule.processingTimeMax);
+  const min = Math.min(...mins);
+  const max = Math.max(...maxes);
 
-  return `${Math.min(...mins)}-${Math.max(...maxes)} 分鐘`;
+  if (min <= 0 || max <= 0) {
+    return "需查官方技術手冊";
+  }
+
+  return `${min}-${max} 分鐘`;
 }
 
 export function BrandRuleCard({ rule }: BrandRuleCardProps) {
