@@ -38,8 +38,20 @@
 - 不儲存顧客資料。
 - 不儲存配方紀錄。
 - 下載配方單只在使用者裝置本機產生。
+- 使用 Vercel Web Analytics 統計頁面訪問與技術指標，用於 Beta 試用觀察。
 - partial / unverified 品牌規則只提供方向性建議，不輸出精確克數。
 - 回饋入口位於 `/feedback`，目前採複製格式後由管理者人工收集。
+
+## 訪問統計
+
+本專案使用 `@vercel/analytics` 啟用 Vercel Web Analytics：
+
+- 全站 page view 會進入 Vercel Analytics。
+- 首頁會額外送出 `Homepage view` custom event。
+- 不需要環境變數。
+- 不儲存顧客資料或配方內容。
+- 統計結果請到 Vercel Dashboard 的專案 `Analytics` 頁查看。
+- 若看不到資料，請先確認 Vercel Project 的 `Analytics` 已啟用，並等待正式部署後產生新訪問。
 
 內部發佈檢查請見 `docs/BETA_TRIAL_RELEASE.md`。
 

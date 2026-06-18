@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { BetaBanner } from "@/components/BetaBanner";
@@ -93,6 +94,7 @@ export default function RootLayout({
           </div>
         </footer>
         <MobileNav />
+        <Analytics />
       </body>
     </html>
   );

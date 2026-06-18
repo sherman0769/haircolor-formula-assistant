@@ -11,6 +11,7 @@ describe("beta trial metadata", () => {
     expect(APP_VERSION).toContain("beta");
     expect(betaTrialHighlights.join(" ")).toContain("不儲存顧客資料");
     expect(betaTrialHighlights.join(" ")).toContain("不儲存配方紀錄");
+    expect(betaTrialHighlights.join(" ")).toContain("Vercel Web Analytics");
   });
 
   it("includes structured feedback and launch copy", () => {

@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import { HomeVisitTracker } from "@/components/HomeVisitTracker";
 import { SafetyNotice } from "@/components/SafetyNotice";
 import { APP_VERSION } from "@/lib/app-meta";
 
@@ -41,6 +42,7 @@ const entryLinks = [
 export default function HomePage() {
   return (
     <>
+      <HomeVisitTracker />
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image
@@ -104,6 +106,16 @@ export default function HomePage() {
                 </Link>
               );
             })}
+            <div className="rounded-lg border border-border bg-panel p-4 shadow-sm">
+              <div className="mb-4 flex size-5 items-center justify-center text-accent">
+                <Sparkles aria-hidden="true" className="size-5" />
+              </div>
+              <h2 className="text-base font-semibold">訪問統計已啟用</h2>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                首頁訪問與各頁流量會進入 Vercel Web Analytics，供 Beta
+                試用觀察，不儲存顧客資料或配方內容。
+              </p>
+            </div>
           </div>
           <SafetyNotice compact />
         </section>
